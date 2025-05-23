@@ -18,6 +18,30 @@ const Services = () => {
             <h3 className="text-xl font-semibold mb-4">Service 3</h3>
             <p className="text-gray-600">Description of service 3</p>
           </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Service 4</h3>
+            <p className="text-gray-600">Description of service 4 (Dummy)</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Service 5</h3>
+            <p className="text-gray-600">Description of service 5 (Dummy)</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Service 6</h3>
+            <p className="text-gray-600">Description of service 6 (Dummy)</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Service 7</h3>
+            <p className="text-gray-600">Description of service 7 (Dummy)</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Service 8</h3>
+            <p className="text-gray-600">Description of service 8 (Dummy)</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Service 9</h3>
+            <p className="text-gray-600">Description of service 9 (Dummy)</p>
+          </div>
         </div>
       </div>
     </div>

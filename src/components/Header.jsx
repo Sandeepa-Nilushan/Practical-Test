@@ -20,10 +20,10 @@ const Header = () => {
     <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50 border-b border-gray-200">
       <div className="container mx-auto px-4 py-4 flex items-center">
         {/* Logo */}
-        <div className="flex items-center text-2xl font-bold text-black tracking-wide">
+        <a href="/" className="flex items-center text-2xl font-bold text-black tracking-wide">
           {/* Placeholder for icon */}
           <span className="text-yellow-500 mr-2">◆</span> Cargo <span className="text-yellow-500 ml-1">TON</span>
-        </div>
+        </a>
 
         {/* Nav Links and Buttons */}
         <div className="hidden md:flex items-center ml-auto space-x-12">
@@ -44,7 +44,7 @@ const Header = () => {
                 className={`hover:text-yellow-500 transition flex items-center cursor-pointer ${activeLink === 'pages' ? 'border-l-2 border-yellow-500 pl-2' : ''}`}
                 onClick={() => handleLinkClick('pages')}
               >
-                PAGES <span className="ml-1 text-xs">▼</span>
+                PAGES <span className="ml-2 text-xs">▼</span>
               </a>
               {openDropdown === 'pages' && (
                 <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-sm shadow-lg border border-gray-100 py-1 z-20">
@@ -72,7 +72,7 @@ const Header = () => {
                 className={`hover:text-yellow-500 transition flex items-center cursor-pointer ${activeLink === 'services' ? 'border-l-2 border-yellow-500 pl-2' : ''}`}
                 onClick={() => handleLinkClick('services')}
               >
-                SERVICES <span className="ml-1 text-xs">▼</span>
+                SERVICES <span className="ml-2 text-xs">▼</span>
               </a>
               {openDropdown === 'services' && (
                 <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-sm shadow-lg border border-gray-100 py-1 z-20">
@@ -92,7 +92,7 @@ const Header = () => {
                 className={`hover:text-yellow-500 transition flex items-center cursor-pointer ${activeLink === 'blog' ? 'border-l-2 border-yellow-500 pl-2' : ''}`}
                 onClick={() => handleLinkClick('blog')}
               >
-                BLOG <span className="ml-1 text-xs">▼</span>
+                BLOG <span className="ml-2 text-xs">▼</span>
               </a>
               {openDropdown === 'blog' && (
                 <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-sm shadow-lg border border-gray-100 py-1 z-20">

@@ -79,27 +79,27 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-gray-700 text-gray-300 py-10">
+    <footer className="bg-gray-700 text-gray-300 py-6 sm:py-8 md:py-10">
       <div className="container mx-auto px-4">
         {/* Weekly Newsletter */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center mb-36">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 items-center mb-16 sm:mb-24 md:mb-36">
           <div className="md:col-span-2 lg:col-span-2 flex items-center">
             <div>
-              <h3 className="text-3xl font-bold text-white mb-2">Weekly Newsletter</h3>
-              <p className="text-gray-400">There are many variations of passages of lorem ipsum available.</p>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">Weekly Newsletter</h3>
+              <p className="text-sm sm:text-base text-gray-400">There are many variations of passages of lorem ipsum available.</p>
             </div>
           </div>
-          <div className="md:col-span-2 lg:col-span-2 flex items-center space-x-2 w-full">
+          <div className="md:col-span-2 lg:col-span-2 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2 w-full">
             <input
               type="email"
               placeholder="Enter Your Mail"
               value={emailInput}
               onChange={(e) => setEmailInput(e.target.value)}
-              className="flex-grow px-4 py-3 rounded focus:outline-none text-gray-800"
+              className="w-full sm:flex-grow px-3 sm:px-4 py-2 sm:py-3 rounded focus:outline-none text-gray-800 text-sm sm:text-base"
             />
             <button
               onClick={handleSubscribeClick}
-              className="bg-yellow-500 text-white px-6 py-3 rounded font-semibold hover:bg-yellow-600 transition"
+              className="w-full sm:w-auto bg-yellow-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded font-semibold hover:bg-yellow-600 transition text-sm sm:text-base"
             >
               SUBSCRIBE
             </button>
@@ -107,18 +107,18 @@ const Footer = () => {
         </div>
 
         {/* Footer Links and Gallery */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
           {/* About Us */}
           <div>
-            <h4 className="text-xl font-semibold text-white mb-6">About Us</h4>
-            <div className="w-20 border-b-2 border-dashed border-yellow-500 mb-10"></div>
-            <p className="text-gray-400 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p className="text-gray-400 flex items-center mb-2 cursor-pointer hover:text-white">
+            <h4 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">About Us</h4>
+            <div className="w-16 sm:w-20 border-b-2 border-dashed border-yellow-500 mb-6 sm:mb-10"></div>
+            <p className="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p className="text-sm sm:text-base text-gray-400 flex items-center mb-2 cursor-pointer hover:text-white">
               <span className="mr-2"><FaPhone className="text-gray-400" /></span>
               <span className="mx-2">|</span>
               <span>(+94) 11 434 7575</span>
             </p>
-            <p className="text-gray-400 flex items-center cursor-pointer hover:text-white">
+            <p className="text-sm sm:text-base text-gray-400 flex items-center cursor-pointer hover:text-white">
               <span className="mr-2"><FaMapMarkerAlt className="text-gray-400" /></span>
               <span className="mx-2">|</span>
               <span>42 Lily Ave, Colombo 00600</span>
@@ -127,24 +127,24 @@ const Footer = () => {
 
           {/* Latest News */}
           <div>
-            <h4 className="text-xl font-semibold text-white mb-6">Latest News</h4>
-            <div className="w-20 border-b-2 border-dashed border-yellow-500 mb-10"></div>
+            <h4 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Latest News</h4>
+            <div className="w-16 sm:w-20 border-b-2 border-dashed border-yellow-500 mb-6 sm:mb-10"></div>
             <ul>
-              <li className="mb-6">
+              <li className="mb-4 sm:mb-6">
                 <div className="flex items-start">
-                  <span className="mr-4 text-yellow-500 mt-1">&gt;</span>
+                  <span className="mr-3 sm:mr-4 text-yellow-500 mt-1">&gt;</span>
                   <div>
-                    <p className="text-gray-400 mb-2 cursor-pointer hover:text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-                    <span className="text-gray-500 text-sm">5 Minutes Ago</span>
+                    <p className="text-sm sm:text-base text-gray-400 mb-1 sm:mb-2 cursor-pointer hover:text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                    <span className="text-xs sm:text-sm text-gray-500">5 Minutes Ago</span>
                   </div>
                 </div>
               </li>
               <li>
                 <div className="flex items-start">
-                  <span className="mr-4 text-yellow-500 mt-1">&gt;</span>
+                  <span className="mr-3 sm:mr-4 text-yellow-500 mt-1">&gt;</span>
                   <div>
-                    <p className="text-gray-400 mb-2 cursor-pointer hover:text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-                    <span className="text-gray-500 text-sm">5 Minutes Ago</span>
+                    <p className="text-sm sm:text-base text-gray-400 mb-1 sm:mb-2 cursor-pointer hover:text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                    <span className="text-xs sm:text-sm text-gray-500">5 Minutes Ago</span>
                   </div>
                 </div>
               </li>
@@ -153,78 +153,80 @@ const Footer = () => {
 
           {/* Customer Service */}
           <div>
-            <h4 className="text-xl font-semibold text-white mb-6">Customer Service</h4>
-            <div className="w-20 border-b-2 border-dashed border-yellow-500 mb-10"></div>
-            <ul>
-              <li className="mb-2 flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> <span className="text-gray-400 cursor-pointer hover:text-white">Support Forums</span>
-              </li>
-              <li className="mb-2 flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> <span className="text-gray-400 cursor-pointer hover:text-white">Communication</span>
-              </li>
-              <li className="mb-2 flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> <span className="text-gray-400 cursor-pointer hover:text-white">FAQS</span>
-              </li>
-              <li className="mb-2 flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> <span className="text-gray-400 cursor-pointer hover:text-white">Privacy Policy</span>
-              </li>
-              <li className="mb-2 flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> <span className=" text-gray-400 cursor-pointer hover:text-white">Rules & Condition</span>
+            <h4 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Customer Service</h4>
+            <div className="w-16 sm:w-20 border-b-2 border-dashed border-yellow-500 mb-6 sm:mb-10"></div>
+            <ul className="space-y-1 sm:space-y-2">
+              <li className="flex items-center">
+                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
+                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">Support Forums</span>
               </li>
               <li className="flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> <span className=" text-gray-400 cursor-pointer hover:text-white">Contact Us</span>
+                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
+                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">Communication</span>
+              </li>
+              <li className="flex items-center">
+                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
+                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">FAQS</span>
+              </li>
+              <li className="flex items-center">
+                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
+                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">Privacy Policy</span>
+              </li>
+              <li className="flex items-center">
+                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
+                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">Rules & Condition</span>
+              </li>
+              <li className="flex items-center">
+                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
+                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">Contact Us</span>
               </li>
             </ul>
           </div>
 
           {/* Gallery */}
           <div>
-            <h4 className="text-xl font-semibold text-white mb-6">Gallery</h4>
-            <div className="w-20 border-b-2 border-dashed border-yellow-500 mb-10"></div>
-            <div className="grid grid-cols-3 gap-1">
-              <img src={Image1} alt="Gallery Image 1" className="w-full h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={Image2} alt="Gallery Image 2" className="w-full h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={Image3} alt="Gallery Image 3" className="w-full h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={Image4} alt="Gallery Image 4" className="w-full h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={Image5} alt="Gallery Image 5" className="w-full h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={Image6} alt="Gallery Image 6" className="w-full h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
+            <h4 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Gallery</h4>
+            <div className="w-16 sm:w-20 border-b-2 border-dashed border-yellow-500 mb-6 sm:mb-10"></div>
+            <div className="grid grid-cols-3 gap-1 sm:gap-2">
+              <img src={Image1} alt="Gallery Image 1" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
+              <img src={Image2} alt="Gallery Image 2" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
+              <img src={Image3} alt="Gallery Image 3" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
+              <img src={Image4} alt="Gallery Image 4" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
+              <img src={Image5} alt="Gallery Image 5" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
+              <img src={Image6} alt="Gallery Image 6" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-600 pt-8 text-gray-400 text-sm">
-          <div>
+        <div className="flex flex-col sm:flex-row items-center justify-between border-t border-gray-600 pt-6 sm:pt-8 text-gray-400 text-xs sm:text-sm">
+          <div className="mb-4 sm:mb-0">
             Copyright © 2025 All Rights Reserved. Site By <span className="text-yellow-500">Sandeepa®</span>
           </div>
-          <div className="flex space-x-4 mt-4 md:mt-0 text-white">
-            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaFacebookF /></a>
-            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaTwitter /></a>
-            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaLinkedinIn /></a> {/* Assuming 'v' is LinkedIn */}
-            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaBehance /></a> {/* Assuming 'Be' is Behance */}
-            <a href="#" className="flex items-center justify-center w-8 h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaDribbble /></a> {/* Assuming '®' is Dribbble or similar */}
+          <div className="flex space-x-3 sm:space-x-4 text-white">
+            <a href="#" className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaFacebookF /></a>
+            <a href="#" className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaTwitter /></a>
+            <a href="#" className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaLinkedinIn /></a>
+            <a href="#" className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaBehance /></a>
+            <a href="#" className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaDribbble /></a>
           </div>
         </div>
 
         {/* Scroll to Top Button */}
         {isVisible && (
-          <div className="fixed bottom-10 right-8 w-12 h-12 flex items-center justify-center">
+          <div className="fixed bottom-6 sm:bottom-10 right-4 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
             <CircularProgressbarWithChildren
               value={scrollProgress}
               strokeWidth={10}
               styles={buildStyles({
-                // Path color
                 pathColor: `black`,
-                // Trail color
                 trailColor: `#4B5563`,
-                // No background
                 backgroundColor: 'transparent',
               })}
             >
-              {/* Content inside the progressbar */}
               <div
                 onClick={scrollToTop}
-                className="bg-yellow-500 text-white text-3xl font-extrabold p-2 rounded-full cursor-pointer hover:bg-yellow-600 transition flex items-center justify-center w-10 h-10"
+                className="bg-yellow-500 text-white text-2xl sm:text-3xl font-extrabold p-2 rounded-full cursor-pointer hover:bg-yellow-600 transition flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10"
               >
                 ↑
               </div>
@@ -234,26 +236,25 @@ const Footer = () => {
 
         {/* Popup Modal */}
         {isModalOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-gray-700 p-6 rounded-lg shadow-lg text-white max-w-sm w-full relative">
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+            <div className="bg-gray-700 p-4 sm:p-6 rounded-lg shadow-lg text-white max-w-sm w-full relative">
               <button
                 onClick={closeModal}
                 className="absolute top-2 right-2 text-gray-400 hover:text-white text-xl"
               >
                 &times;
               </button>
-              <h4 className="text-2xl font-bold mb-4 text-center">Subscription Successful!</h4>
-              <p className="text-center">Welcome aboard! You'll now receive the latest news at {emailInput}.</p>
+              <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-center">Subscription Successful!</h4>
+              <p className="text-sm sm:text-base text-center">Welcome aboard! You'll now receive the latest news at {emailInput}.</p>
               <button
                 onClick={closeModal}
-                className="mt-6 bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-600 transition block mx-auto"
+                className="mt-4 sm:mt-6 bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-600 transition block mx-auto text-sm sm:text-base"
               >
                 Close
               </button>
             </div>
           </div>
         )}
-
       </div>
     </footer>
   );

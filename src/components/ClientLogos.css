@@ -1,0 +1,54 @@
+.client-logos-section {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .logos-carousel-container {
+    width: 80%; /* Use percentage for responsiveness */
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  
+  .logos-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Add transition for smooth sliding */
+    /* Remove justify-content for consistent spacing managed by margin */
+  }
+  
+  .client-logo {
+    height: 60px; /* Height as requested */
+    margin: 0 50px; /* Consistent horizontal margin */
+    /* Add grayscale filter to match the image */
+    filter: grayscale(100%);
+    opacity: 0.6; /* Adjust opacity to match the faded look */
+    flex-shrink: 0; /* Prevent logos from shrinking */
+    width: 12%; /* Maintain aspect ratio */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out,
+      opacity 0.5s ease-in-out;
+  }
+  
+  .client-logo.middle {
+    filter: none; /* Remove grayscale */
+    opacity: 1; /* Full opacity */
+    transform: scale(1.2); /* Zoom effect */
+    /* Adjust margin if necessary to prevent layout shifts when scaling */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .logos-carousel-container {
+      width: 95%; /* Increase width on smaller screens */
+    }
+  
+    .client-logo {
+      height: 40px; /* Smaller height on smaller screens */
+      margin: 0 10px; /* Reduced margin */
+    }
+  
+    .client-logo.middle {
+      transform: scale(1.1); /* Slightly less zoom on smaller screens */
+      margin: 0 15px; /* Adjusted margin for smaller scale */
+    }
+  }
+  

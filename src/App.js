@@ -5,7 +5,7 @@ import Services from "./components/Services";
 // import Stats from "./components/Stats";
 // import Testimonials from "./components/Testimonials";
 // import WhyChooseUs from "./components/WhyChooseUs";
-// import ClientLogos from "./components/ClientLogos";
+import ClientLogos from "./components/ClientLogos";
 // import News from "./components/News";
 import Footer from "./components/Footer";
 import './App.css';
@@ -20,9 +20,9 @@ function App() {
         <Services />
         {/* <Stats />
         <Testimonials />
-        <WhyChooseUs />
+        <WhyChooseUs /> */}
         <ClientLogos />
-        <News /> */}
+        {/* <News /> */}
       </div>
       <Footer />
     </div>

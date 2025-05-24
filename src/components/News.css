@@ -1,0 +1,205 @@
+/* Styles for News component */
+
+.news-section {
+  padding: 100px;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.latest-news-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.latest-news-header h3 {
+  margin: 0;
+  margin-right: 10px;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.latest-news-header h3 .header-bottom-line {
+  display: flex;
+  align-items: center;
+  margin-top: 5px; /* Space between the two lines */
+}
+
+.latest-news-header h3 span {
+  font-size: 12px; /* Smaller font size for the second line */
+  font-weight: 400; /* Lighter weight for the second line */
+  color: #555;
+  margin-top: 0; /* Ensure no top margin */
+  margin-bottom: 0; /* Ensure no bottom margin */
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #00b0e8;
+  margin-bottom: 0;
+  margin-right: 5px;
+}
+
+.news-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.news-card {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  display: flex; /* Use flexbox on the card itself */
+  align-items: stretch; /* Ensure items stretch to fill the container height */
+  border-radius: 5px; /* Ensure consistent border radius */
+  height: 250px; /* Set a fixed height for the news card */
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  background-color: #00b0e8; /* Blue background on hover */
+  color: #fff; /* White text on hover */
+}
+
+.card-image-wrapper {
+  width: 45%;
+  flex-basis: 45%;
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.card-image-wrapper img {
+  display: block;
+  width: 100%; /* Image fills the wrapper width */
+  height: 100%; /* Image fills the wrapper height */
+  object-fit: cover; /* Cover the area without distorting */
+}
+
+.card-text-content {
+  padding: 20px 25px; /* Adjust padding for more text space */
+  flex: 1; /* Allow text content to take remaining space */
+  background-color: #f8f8f8; /* Light gray background */
+}
+
+.news-card:hover .card-text-content {
+  background-color: #00b0e8; /* Blue background on hover */
+}
+
+.date-overlay {
+  position: absolute;
+  top: 0;
+  left: 0; /* Position on the top-left corner */
+  background-color: #333; /* Dark background */
+  color: #fff;
+  padding: 5px 10px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 0 0 3px 0; /* Adjust border radius */
+  z-index: 1; /* Ensure it's above the image */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.date-overlay .day {
+  display: block;
+  font-size: 20px;
+}
+
+.date-overlay .month {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.news-card:hover .date-overlay {
+  background-color: #00b0e8; /* Blue background on hover */
+  color: #fff; /* White text on hover */
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h4 {
+  margin-top: 0;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.news-card:hover .card-content h4 {
+  color: #fff;
+}
+
+.meta {
+  font-size: 11px;
+  color: #555;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.news-card:hover .meta {
+  color: #fff;
+}
+
+.meta span {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  color: #555; /* Default color for meta text */
+}
+
+.meta span svg {
+  margin-right: 5px; /* Add space between icon and number */
+  color: #00b0e8; /* Blue color for the icon */
+}
+
+.news-card:hover .meta span svg {
+  color: #fff; /* White color for icon on hover */
+}
+
+.meta span.admin::before {
+  content: '\f007'; /* Font Awesome user icon */
+  font-family: 'Font Awesome 5 Free'; /* Adjust font family if needed */
+  font-weight: 900; /* Solid icon */
+  margin-right: 5px;
+}
+
+.meta span.comments::before {
+  content: '\f075'; /* Font Awesome comment icon */
+  font-family: 'Font Awesome 5 Free'; /* Adjust font family if needed */
+  font-weight: 900; /* Solid icon */
+  margin-right: 5px;
+}
+
+.card-content p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #777;
+  margin-bottom: 0;
+}
+
+.news-card:hover .card-content p {
+  color: #fff;
+} 

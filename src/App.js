@@ -6,7 +6,7 @@ import Services from "./components/Services";
 // import Testimonials from "./components/Testimonials";
 // import WhyChooseUs from "./components/WhyChooseUs";
 import ClientLogos from "./components/ClientLogos";
-// import News from "./components/News";
+import News from "./components/News";
 import Footer from "./components/Footer";
 import './App.css';
 
@@ -22,7 +22,7 @@ function App() {
         <Testimonials />
         <WhyChooseUs /> */}
         <ClientLogos />
-        {/* <News /> */}
+        <News />
       </div>
       <Footer />
     </div>

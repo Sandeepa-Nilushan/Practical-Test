@@ -8,7 +8,7 @@ import image4 from '../assets/images/alex-kotliarskyi-QBpZGqEMsKg-unsplash.webp'
 
 const News = () => {
   return (
-    <section className="news-section">
+    <section id="news" className="news-section">
       <div className="container">
         <div className="latest-news-header">
           <h3>

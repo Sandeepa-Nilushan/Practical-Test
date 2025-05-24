@@ -4,6 +4,20 @@ import mainImage from '../assets/images/microsoft-365-kTFmwxkF5bQ-unsplash.webp'
 import overlayImage from '../assets/images/mathurin-napoly-matnapo-Ygyp2kXy2I0-unsplash.webp';
 
 function Welcome() {
+  const scrollToNews = () => {
+    const newsSection = document.getElementById('news');
+    if (newsSection) {
+      const headerOffset = 100; // Adjust this value as needed
+      const elementPosition = newsSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section className="welcome-section">
       <div className="welcome-container">
@@ -28,14 +42,14 @@ function Welcome() {
 
           <h1>TransMax Logistics<br />Around <span className="highlight">the World</span></h1>
           <p>
-            Transmax is the world’s driving worldwide coordinations supplier — we uphold industry
+            Transmax is the world's driving worldwide coordinations supplier — we uphold industry
             and exchange the worldwide trade of merchandise through land transport.
           </p>
           <p>
             Our worth added administrations guarantee the progression of products proceeds
             consistently and supply chains stay lean and streamlined for progress.
           </p>
-          <button>MORE ABOUT US</button>
+          <button onClick={scrollToNews}>MORE ABOUT US</button>
         </div>
 
       </div>

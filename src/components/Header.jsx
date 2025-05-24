@@ -17,8 +17,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50 border-b border-gray-200">
-      <div className="container mx-auto px-4 py-4 flex items-center">
+    <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50 border-b border-gray-200 min-h-[80px] pt-4">
+      <div className="container mx-auto px-8 pb-4 flex items-center max-w-[1400px]">
         {/* Logo */}
         <a href="/" className="flex items-center text-2xl font-bold text-black tracking-wide">
           {/* Placeholder for icon */}

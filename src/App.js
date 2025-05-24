@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import Slider from "./components/Slider";
 // import Welcome from "./components/Welcome";
 import Services from "./components/Services";
-// import Stats from "./components/Stats";
+import Stats from "./components/Stats";
 // import Testimonials from "./components/Testimonials";
 // import WhyChooseUs from "./components/WhyChooseUs";
 import ClientLogos from "./components/ClientLogos";
@@ -13,13 +13,13 @@ import './App.css';
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <Header className="flex-none" />
       <div className="flex-grow">
         <Slider />
         {/* <Welcome /> */}
         <Services />
-        {/* <Stats />
-        <Testimonials />
+        <Stats />
+        {/* <Testimonials />
         <WhyChooseUs /> */}
         <ClientLogos />
         <News />

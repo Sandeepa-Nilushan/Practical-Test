@@ -1,0 +1,223 @@
+.testimonials-why-choose-us {
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* max-width: 1100px; */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-6 {
+  width: 50%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.testimonials-why-choose-us h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.testimonials-why-choose-us p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.subheader {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 40px; /* Increased vertical space */
+}
+
+.testimonial-block {
+  background-color: #f8f8f8;
+  padding: 30px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.quote-icon {
+  color: #e53935; /* Red color */
+  font-size: 40px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: serif;
+  line-height: 1;
+}
+
+.testimonial-block p:not(.client-info p) {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-top: 0; /* Adjusted margin top as text is now in a separate div */
+  margin-bottom: 0; /* Adjusted margin bottom */
+}
+
+.testimonial-content {
+  transition: opacity 0.5s ease-in-out; /* Fade transition */
+  opacity: 1;
+  /* Add initial state for transition if needed */
+}
+
+/* Potential keyframes for a more controlled animation */
+/*
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.testimonial-content {
+  animation: fadeIn 0.5s ease-in-out;
+}
+*/
+
+.client-info h4 {
+  font-size: 18px;
+  margin: 0 0 5px 0;
+}
+
+.client-info p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.slider-nav {
+  text-align: left;
+}
+
+.slider-nav button {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.slider-nav button:hover {
+  background-color: #eee;
+}
+
+.testimonial-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px; /* Add some space above the footer */
+}
+
+.why-choose-us-items .item {
+  /* border: 1px solid #eee; */ /* Remove individual item border */
+  /* margin-bottom: 10px; */ /* Remove margin bottom */
+}
+
+.why-choose-us-items .item:first-child {
+  border-top: 1px solid #eee; /* Add top border to the first item */
+}
+
+.why-choose-us-items .item {
+  border-bottom: 1px solid #eee; /* Add bottom border to all items */
+}
+
+.why-choose-us-items .item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.why-choose-us-items .item-header p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.why-choose-us-items .item-header button {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  border: none; /* Remove border */
+  width: 30px; /* Fixed width */
+  height: 30px; /* Fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px; /* Larger plus sign */
+  cursor: pointer;
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.why-choose-us-items .item-header button:hover {
+  background-color: #333; /* Slightly lighter black on hover */
+}
+
+.why-choose-us-items .item-content {
+  padding: 15px;
+  border-top: 1px solid #eee; /* Separator between header and content when expanded */
+  font-size: 14px; /* Match surrounding text size */
+  color: #eaeaea; /* Match surrounding text color */
+} 
+
+.testimonial-card {
+  background-color: #eaeaea;
+  padding: 30px;
+  position: relative;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.quote-area {
+  background-color: #e53935; /* Red block */
+  width: 70px;
+  height: 50px;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 40px;
+  left: -25px;
+  clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quote-symbol {
+  font-family: serif;
+  font-size: 32px;
+  line-height: 1;
+  transform: translate(-50%, 20%);
+}
+
+.testimonial-content {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  transition: opacity 0.5s ease-in-out;
+  padding-left: 30px;
+}
+
+.speech-tail {
+  position: absolute;
+  bottom: -20px;
+  right: 40px;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #eaeaea;
+  border-right: 22px solid transparent;
+  border-left: 0;
+  border-top: 0;
+
+  transform: rotate(90deg); /* Rotates the triangle */
+}

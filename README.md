@@ -70,7 +70,7 @@ src/
    ```bash
    npm start
    ```
-5. Open [http://localhost:5173](http://localhost:3000) in your browser
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## Responsive Design
 - Mobile-first approach

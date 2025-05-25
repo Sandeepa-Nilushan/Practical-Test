@@ -158,7 +158,7 @@
 }
 
 .logistic-label::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -226,8 +226,8 @@
 }
 
 .discover-button:hover {
-  background-color: #d4a003; /* Darker yellow on hover */
-  transition: background-color 0.3s ease; /* Smooth transition */
+  background-color: #d4a003;
+  transition: background-color 0.3s ease;
 }
 
 .arrows {
@@ -257,8 +257,8 @@
 }
 
 .arrows:hover {
-  background-color: #d4a003; /* Darker yellow on hover */
-  cursor: pointer; /* Indicate it's clickable */
+  background-color: #d4a003;
+  cursor: pointer;
 }
 
 .arrows span {

@@ -66,7 +66,7 @@
 }
 
 .modal-label::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -169,7 +169,6 @@
   background-color: #f0f0f0;
 }
 
-/* Scrollbar styling */
 .modal-form-container::-webkit-scrollbar {
   width: 8px;
 }
@@ -284,4 +283,4 @@
     height: 30px;
     font-size: 20px;
   }
-} 
+}

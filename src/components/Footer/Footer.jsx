@@ -1,26 +1,37 @@
-import React, { useState, useEffect } from 'react';
-// Import icons
-import { FaPhone, FaMapMarkerAlt, FaCog, FaFacebookF, FaTwitter, FaLinkedinIn, FaBehance, FaDribbble, FaRegHandPointRight } from 'react-icons/fa'; // Assuming react-icons is installed
-// Import react-circular-progressbar components and styles
-import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
-import './Footer.css';
+import React, { useState, useEffect } from "react";
+import {
+  FaPhone,
+  FaMapMarkerAlt,
+  FaCog,
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaBehance,
+  FaDribbble,
+  FaRegHandPointRight,
+} from "react-icons/fa";
 
-// Import images
-import image1 from '../../assets/images/krakenimages-376KN_ISplE-unsplash 1.webp';
-import image2 from '../../assets/images/paul-skorupskas-7KLa-xLbSXA-unsplash.webp';
-import image3 from '../../assets/images/icons8-team-FcLyt7lW5wg-unsplash.webp';
-import image4 from '../../assets/images/mathurin-napoly-matnapo-uiOUuEx1e5U-unsplash.webp';
-import image5 from '../../assets/images/mathurin-napoly-matnapo-Ygyp2kXy2I0-unsplash.webp';
-import image6 from '../../assets/images/alex-kotliarskyi-QBpZGqEMsKg-unsplash.webp';
+import {
+  CircularProgressbarWithChildren,
+  buildStyles,
+} from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import "./Footer.css";
+
+import image1 from "../../assets/images/krakenimages-376KN_ISplE-unsplash 1.webp";
+import image2 from "../../assets/images/paul-skorupskas-7KLa-xLbSXA-unsplash.webp";
+import image3 from "../../assets/images/icons8-team-FcLyt7lW5wg-unsplash.webp";
+import image4 from "../../assets/images/mathurin-napoly-matnapo-uiOUuEx1e5U-unsplash.webp";
+import image5 from "../../assets/images/mathurin-napoly-matnapo-Ygyp2kXy2I0-unsplash.webp";
+import image6 from "../../assets/images/alex-kotliarskyi-QBpZGqEMsKg-unsplash.webp";
 
 const Footer = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [activeLink, setActiveLink] = useState('home');
-  const [isVisible, setIsVisible] = useState(false); // State for scroll button visibility
+  const [activeLink, setActiveLink] = useState("home");
+  const [isVisible, setIsVisible] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [emailInput, setEmailInput] = useState('');
+  const [emailInput, setEmailInput] = useState("");
 
   const handleMouseEnter = (dropdownName) => {
     setOpenDropdown(dropdownName);
@@ -36,7 +47,7 @@ const Footer = () => {
 
   // Show/hide scroll button based on scroll position
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) { // Show button after scrolling down 300px
+    if (window.pageYOffset > 300) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -45,24 +56,25 @@ const Footer = () => {
 
   // Calculate scroll progress
   const handleScroll = () => {
-    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const totalHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
     const scrolledHeight = window.scrollY;
     const progress = (scrolledHeight / totalHeight) * 100;
     setScrollProgress(progress);
-    toggleVisibility(); // Also use scroll to trigger visibility
+    toggleVisibility();
   };
 
   // Scroll to top on button click
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
   // Handle Subscribe button click
   const handleSubscribeClick = () => {
-    if (emailInput.trim() !== '') {
+    if (emailInput.trim() !== "") {
       setIsModalOpen(true);
     }
   };
@@ -73,9 +85,9 @@ const Footer = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -87,7 +99,11 @@ const Footer = () => {
           <div className="newsletter-content">
             <div>
               <h3 className="newsletter-title">Weekly Newsletter</h3>
-              <p className="newsletter-description">Stay updated with the latest logistics trends, shipping innovations, and industry insights delivered to your inbox every week.</p>
+              <p className="newsletter-description">
+                Stay updated with the latest logistics trends, shipping
+                innovations, and industry insights delivered to your inbox every
+                week.
+              </p>
             </div>
           </div>
           <div className="newsletter-form">
@@ -113,14 +129,21 @@ const Footer = () => {
           <div>
             <h4 className="footer-section-title">About Us</h4>
             <div className="section-divider"></div>
-            <p className="footer-text">TransMax delivers innovative logistics solutions worldwide, connecting businesses through efficient supply chains.</p>
+            <p className="footer-text">
+              TransMax delivers innovative logistics solutions worldwide,
+              connecting businesses through efficient supply chains.
+            </p>
             <p className="contact-item">
-              <span className="icon"><FaPhone /></span>
+              <span className="icon">
+                <FaPhone />
+              </span>
               <span className="separator">|</span>
               <span>(+94) 11 434 7575</span>
             </p>
             <p className="contact-item">
-              <span className="icon"><FaMapMarkerAlt /></span>
+              <span className="icon">
+                <FaMapMarkerAlt />
+              </span>
               <span className="separator">|</span>
               <span>42 Lily Ave, Colombo 00600</span>
             </p>
@@ -135,7 +158,10 @@ const Footer = () => {
                 <div className="news-content">
                   <span className="news-arrow">&gt;</span>
                   <div>
-                    <p className="news-text">TransMax expands operations to 10 new countries, strengthening global logistics network.</p>
+                    <p className="news-text">
+                      TransMax expands operations to 10 new countries,
+                      strengthening global logistics network.
+                    </p>
                     <span className="news-time">5 Minutes Ago</span>
                   </div>
                 </div>
@@ -144,7 +170,10 @@ const Footer = () => {
                 <div className="news-content">
                   <span className="news-arrow">&gt;</span>
                   <div>
-                    <p className="news-text">New AI-powered tracking system launched for enhanced shipment visibility.</p>
+                    <p className="news-text">
+                      New AI-powered tracking system launched for enhanced
+                      shipment visibility.
+                    </p>
                     <span className="news-time">5 Minutes Ago</span>
                   </div>
                 </div>
@@ -158,27 +187,39 @@ const Footer = () => {
             <div className="section-divider"></div>
             <ul className="service-list">
               <li className="service-item">
-                <span className="service-icon"><FaRegHandPointRight /></span>
+                <span className="service-icon">
+                  <FaRegHandPointRight />
+                </span>
                 <span className="service-link">Support Forums</span>
               </li>
               <li className="service-item">
-                <span className="service-icon"><FaRegHandPointRight /></span>
+                <span className="service-icon">
+                  <FaRegHandPointRight />
+                </span>
                 <span className="service-link">Communication</span>
               </li>
               <li className="service-item">
-                <span className="service-icon"><FaRegHandPointRight /></span>
+                <span className="service-icon">
+                  <FaRegHandPointRight />
+                </span>
                 <span className="service-link">FAQS</span>
               </li>
               <li className="service-item">
-                <span className="service-icon"><FaRegHandPointRight /></span>
+                <span className="service-icon">
+                  <FaRegHandPointRight />
+                </span>
                 <span className="service-link">Privacy Policy</span>
               </li>
               <li className="service-item">
-                <span className="service-icon"><FaRegHandPointRight /></span>
+                <span className="service-icon">
+                  <FaRegHandPointRight />
+                </span>
                 <span className="service-link">Rules & Condition</span>
               </li>
               <li className="service-item">
-                <span className="service-icon"><FaRegHandPointRight /></span>
+                <span className="service-icon">
+                  <FaRegHandPointRight />
+                </span>
                 <span className="service-link">Contact Us</span>
               </li>
             </ul>
@@ -189,12 +230,36 @@ const Footer = () => {
             <h4 className="footer-section-title">Gallery</h4>
             <div className="section-divider"></div>
             <div className="gallery-grid">
-              <img src={image1} alt="Gallery Image 1" className="gallery-image" />
-              <img src={image2} alt="Gallery Image 2" className="gallery-image" />
-              <img src={image3} alt="Gallery Image 3" className="gallery-image" />
-              <img src={image4} alt="Gallery Image 4" className="gallery-image" />
-              <img src={image5} alt="Gallery Image 5" className="gallery-image" />
-              <img src={image6} alt="Gallery Image 6" className="gallery-image" />
+              <img
+                src={image1}
+                alt="Gallery Image 1"
+                className="gallery-image"
+              />
+              <img
+                src={image2}
+                alt="Gallery Image 2"
+                className="gallery-image"
+              />
+              <img
+                src={image3}
+                alt="Gallery Image 3"
+                className="gallery-image"
+              />
+              <img
+                src={image4}
+                alt="Gallery Image 4"
+                className="gallery-image"
+              />
+              <img
+                src={image5}
+                alt="Gallery Image 5"
+                className="gallery-image"
+              />
+              <img
+                src={image6}
+                alt="Gallery Image 6"
+                className="gallery-image"
+              />
             </div>
           </div>
         </div>
@@ -202,14 +267,32 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="bottom-bar">
           <div className="copyright">
-            Copyright © 2025 All Rights Reserved. Site By <a href="https://www.linkedin.com/in/sandeepanilushan/" target="_blank" rel="noopener noreferrer" className="copyright-highlight">Sandeepa Nilushan</a>
+            Copyright © 2025 All Rights Reserved. Site By{" "}
+            <a
+              href="https://www.linkedin.com/in/sandeepanilushan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="copyright-highlight"
+            >
+              Sandeepa Nilushan
+            </a>
           </div>
           <div className="social-links">
-            <a href="#" className="social-link"><FaFacebookF /></a>
-            <a href="#" className="social-link"><FaTwitter /></a>
-            <a href="#" className="social-link"><FaLinkedinIn /></a>
-            <a href="#" className="social-link"><FaBehance /></a>
-            <a href="#" className="social-link"><FaDribbble /></a>
+            <a href="#" className="social-link">
+              <FaFacebookF />
+            </a>
+            <a href="#" className="social-link">
+              <FaTwitter />
+            </a>
+            <a href="#" className="social-link">
+              <FaLinkedinIn />
+            </a>
+            <a href="#" className="social-link">
+              <FaBehance />
+            </a>
+            <a href="#" className="social-link">
+              <FaDribbble />
+            </a>
           </div>
         </div>
 
@@ -217,18 +300,15 @@ const Footer = () => {
         {isModalOpen && (
           <div className="modal-overlay">
             <div className="modal-content">
-              <button
-                onClick={closeModal}
-                className="modal-close"
-              >
+              <button onClick={closeModal} className="modal-close">
                 &times;
               </button>
               <h4 className="modal-title">Subscription Successful!</h4>
-              <p className="modal-message">Welcome aboard! You'll now receive the latest news at {emailInput}.</p>
-              <button
-                onClick={closeModal}
-                className="modal-button"
-              >
+              <p className="modal-message">
+                Welcome aboard! You'll now receive the latest news at{" "}
+                {emailInput}.
+              </p>
+              <button onClick={closeModal} className="modal-button">
                 Close
               </button>
             </div>
@@ -243,17 +323,14 @@ const Footer = () => {
             value={scrollProgress}
             strokeWidth={10}
             styles={buildStyles({
-              // pathColor: `#00b0e8`, //Blue 
+              // pathColor: `#00b0e8`, //Blue
               pathColor: `#f97316`, // orange
               // pathColor: `#16a34a`,  // Green
               trailColor: `black`,
-              backgroundColor: 'transparent',
+              backgroundColor: "transparent",
             })}
           >
-            <div
-              onClick={scrollToTop}
-              className="scroll-button"
-            >
+            <div onClick={scrollToTop} className="scroll-button">
               ↑
             </div>
           </CircularProgressbarWithChildren>

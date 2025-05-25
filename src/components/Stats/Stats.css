@@ -80,15 +80,15 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  
+
   .background-number {
     font-size: 8em;
   }
-  
+
   .stat-number {
     font-size: 2.75em;
   }
-  
+
   .stat-label {
     font-size: 1em;
   }
@@ -99,19 +99,19 @@
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  
+
   .stats-container {
     gap: 60px;
   }
-  
+
   .background-number {
     font-size: 7em;
   }
-  
+
   .stat-number {
     font-size: 2.5em;
   }
-  
+
   .stat-label {
     font-size: 0.95em;
   }
@@ -122,19 +122,19 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  
+
   .stats-container {
     gap: 40px;
   }
-  
+
   .background-number {
     font-size: 6em;
   }
-  
+
   .stat-number {
     font-size: 2.25em;
   }
-  
+
   .stat-label {
     font-size: 0.9em;
   }
@@ -146,25 +146,25 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  
+
   .stats-container {
     justify-content: center;
     gap: 30px;
   }
-  
+
   .stat-item {
     flex: 0 0 calc(50% - 15px);
     min-width: 160px;
   }
-  
+
   .background-number {
     font-size: 5em;
   }
-  
+
   .stat-number {
     font-size: 2em;
   }
-  
+
   .stat-label {
     font-size: 0.85em;
   }

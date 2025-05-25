@@ -1,6 +1,6 @@
 .footer {
   background-color: #374151;
-  color: #D1D5DB;
+  color: #d1d5db;
   padding: 1.5rem 0;
 }
 
@@ -54,7 +54,6 @@
   }
 }
 
-/* Newsletter Section */
 .newsletter-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -110,7 +109,7 @@
 
 .newsletter-description {
   font-size: 0.875rem;
-  color: #9CA3AF;
+  color: #9ca3af;
 }
 
 @media (min-width: 640px) {
@@ -148,9 +147,9 @@
   padding: 0.75rem 1rem;
   border-radius: 0.375rem;
   outline: none;
-  color: #1F2937;
+  color: #1f2937;
   font-size: 0.875rem;
-  border: 1px solid #E5E7EB;
+  border: 1px solid #e5e7eb;
 }
 
 @media (min-width: 640px) {
@@ -164,7 +163,7 @@
 .newsletter-button {
   width: 100%;
   max-width: 300px;
-  background-color: #F59E0B;
+  background-color: #f59e0b;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.375rem;
@@ -183,10 +182,9 @@
 }
 
 .newsletter-button:hover {
-  background-color: #D97706;
+  background-color: #d97706;
 }
 
-/* Footer Links and Gallery */
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -228,7 +226,7 @@
 
 .section-divider {
   width: 4rem;
-  border-bottom: 2px dashed #F59E0B;
+  border-bottom: 2px dashed #f59e0b;
   margin: 0 auto 1.5rem;
 }
 
@@ -241,7 +239,7 @@
 
 .footer-text {
   font-size: 0.875rem;
-  color: #9CA3AF;
+  color: #9ca3af;
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -256,7 +254,7 @@
 
 .contact-item {
   font-size: 0.875rem;
-  color: #9CA3AF;
+  color: #9ca3af;
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
@@ -311,7 +309,7 @@
 
 .news-arrow {
   margin-right: 0.75rem;
-  color: #F59E0B;
+  color: #f59e0b;
   margin-top: 0.25rem;
 }
 
@@ -323,7 +321,7 @@
 
 .news-text {
   font-size: 0.875rem;
-  color: #9CA3AF;
+  color: #9ca3af;
   margin-bottom: 0.25rem;
   cursor: pointer;
   text-align: center;
@@ -343,7 +341,7 @@
 
 .news-time {
   font-size: 0.75rem;
-  color: #6B7280;
+  color: #6b7280;
   text-align: center;
 }
 
@@ -387,7 +385,7 @@
 }
 
 .service-icon {
-  color: #9CA3AF;
+  color: #9ca3af;
   width: 20px;
   display: flex;
   align-items: center;
@@ -397,7 +395,7 @@
 
 .service-link {
   font-size: 0.875rem;
-  color: #9CA3AF;
+  color: #9ca3af;
   cursor: pointer;
   text-align: center;
   white-space: nowrap;
@@ -453,9 +451,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #4B5563;
+  border-top: 1px solid #4b5563;
   padding-top: 1.5rem;
-  color: #9CA3AF;
+  color: #9ca3af;
   font-size: 0.75rem;
 }
 
@@ -478,13 +476,13 @@
 }
 
 .copyright-highlight {
-  color: #F59E0B;
+  color: #f59e0b;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .copyright-highlight:hover {
-  color: #D97706;
+  color: #d97706;
   text-decoration: underline;
 }
 
@@ -505,7 +503,7 @@
   justify-content: center;
   width: 1.75rem;
   height: 1.75rem;
-  background-color: #9CA3AF;
+  background-color: #9ca3af;
   border-radius: 9999px;
   color: white;
   transition: background-color 0.3s;
@@ -519,7 +517,7 @@
 }
 
 .social-link:hover {
-  background-color: #F59E0B;
+  background-color: #f59e0b;
 }
 
 /* Scroll to Top Button */
@@ -580,7 +578,7 @@
 }
 
 .scroll-button {
-  background-color: #F59E0B;
+  background-color: #f59e0b;
   color: white;
   font-size: 1.5rem;
   font-weight: 800;
@@ -604,7 +602,7 @@
 }
 
 .scroll-button:hover {
-  background-color: #D97706;
+  background-color: #d97706;
 }
 
 /* Modal */
@@ -660,7 +658,7 @@
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  color: #9CA3AF;
+  color: #9ca3af;
   font-size: 1.25rem;
 }
 
@@ -695,7 +693,7 @@
 
 .modal-button {
   margin-top: 1rem;
-  background-color: #F59E0B;
+  background-color: #f59e0b;
   color: black;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -714,5 +712,5 @@
 }
 
 .modal-button:hover {
-  background-color: #D97706;
+  background-color: #d97706;
 }

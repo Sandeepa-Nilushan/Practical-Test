@@ -201,7 +201,7 @@
     width: 1rem;
     height: 1rem;
   }
-  
+
   .arrow-circle svg {
     font-size: 0.5rem;
   }
@@ -316,4 +316,4 @@
   .carousel-nav-button {
     display: flex;
   }
-} 
+}

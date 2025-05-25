@@ -34,7 +34,7 @@
 .subheader {
   font-size: 14px;
   color: #666;
-  margin-bottom: 40px; /* Increased vertical space */
+  margin-bottom: 40px;
 }
 
 .testimonial-block {
@@ -45,7 +45,7 @@
 }
 
 .quote-icon {
-  color: #e53935; /* Red color */
+  color: #e53935;
   font-size: 40px;
   position: absolute;
   top: 20px;
@@ -58,27 +58,14 @@
   font-size: 16px;
   color: #333;
   line-height: 1.6;
-  margin-top: 0; /* Adjusted margin top as text is now in a separate div */
-  margin-bottom: 0; /* Adjusted margin bottom */
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .testimonial-content {
-  transition: opacity 0.5s ease-in-out; /* Fade transition */
+  transition: opacity 0.5s ease-in-out;
   opacity: 1;
-  /* Add initial state for transition if needed */
 }
-
-/* Potential keyframes for a more controlled animation */
-/*
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.testimonial-content {
-  animation: fadeIn 0.5s ease-in-out;
-}
-*/
 
 .client-info h4 {
   font-size: 18px;
@@ -112,7 +99,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px; /* Add some space above the footer */
+  margin-top: 20px;
 }
 
 .why-choose-us-items .item {
@@ -121,11 +108,11 @@
 }
 
 .why-choose-us-items .item:first-child {
-  border-top: 1px solid #eee; /* Add top border to the first item */
+  border-top: 1px solid #eee;
 }
 
 .why-choose-us-items .item {
-  border-bottom: 1px solid #eee; /* Add bottom border to all items */
+  border-bottom: 1px solid #eee;
 }
 
 .why-choose-us-items .item-header {
@@ -143,29 +130,29 @@
 }
 
 .why-choose-us-items .item-header button {
-  background-color: #000; /* Black background */
-  color: #fff; /* White text */
-  border: none; /* Remove border */
-  width: 30px; /* Fixed width */
-  height: 30px; /* Fixed height */
+  background-color: #000;
+  color: #fff;
+  border: none;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px; /* Larger plus sign */
+  font-size: 20px;
   cursor: pointer;
-  flex-shrink: 0; /* Prevent button from shrinking */
+  flex-shrink: 0;
 }
 
 .why-choose-us-items .item-header button:hover {
-  background-color: #333; /* Slightly lighter black on hover */
+  background-color: #333;
 }
 
 .why-choose-us-items .item-content {
   padding: 15px;
-  border-top: 1px solid #eee; /* Separator between header and content when expanded */
-  font-size: 14px; /* Match surrounding text size */
-  color: #eaeaea; /* Match surrounding text color */
-} 
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #eaeaea;
+}
 
 .testimonial-card {
   background-color: #eaeaea;
@@ -177,7 +164,7 @@
 }
 
 .quote-area {
-  background-color: #e53935; /* Red block */
+  background-color: #e53935;
   width: 70px;
   height: 50px;
   color: #fff;
@@ -218,6 +205,5 @@
   border-right: 22px solid transparent;
   border-left: 0;
   border-top: 0;
-
-  transform: rotate(90deg); /* Rotates the triangle */
+  transform: rotate(90deg);
 }

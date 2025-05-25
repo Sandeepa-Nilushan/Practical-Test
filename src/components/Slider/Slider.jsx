@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import './Slider.css';
-import image1 from '../../assets/images/austin-distel-rxpThOwuVgE-unsplash.webp';
-import image2 from '../../assets/images/microsoft-365-MFK0JpFU13U-unsplash.webp';
+import React, { useState, useEffect } from "react";
+import "./Slider.css";
+import image1 from "../../assets/images/austin-distel-rxpThOwuVgE-unsplash.webp";
+import image2 from "../../assets/images/microsoft-365-MFK0JpFU13U-unsplash.webp";
 
 const slides = [
   {
     id: 1,
     image: image1,
-    heading: 'Best Shipping',
-    highlight: 'Partner',
+    heading: "Best Shipping",
+    highlight: "Partner",
   },
   {
     id: 2,
     image: image2,
-    heading: 'Global Logistic',
-    highlight: 'Network',
+    heading: "Global Logistic",
+    highlight: "Network",
   },
 ];
 
@@ -27,8 +27,8 @@ const Slider = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const prevSlide = () => {
@@ -40,15 +40,16 @@ const Slider = () => {
   };
 
   const scrollToServices = () => {
-    const servicesSection = document.getElementById('services');
+    const servicesSection = document.getElementById("services");
     if (servicesSection) {
-      const headerOffset = isMobile ? 80 : 100; // Adjusted offset for mobile
+      const headerOffset = isMobile ? 80 : 100;
       const elementPosition = servicesSection.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
@@ -67,12 +68,12 @@ const Slider = () => {
                 <span className="highlight">{currentSlide.highlight}</span>
               </h1>
               <p className="slider-description">
-                Amet, tempus egestas facilisis volutpat viverra molestie lobortis
-                posuere maecenas. molestie lobortis posuere maecenas. Eget sapien,
-                gravida nequi.
+                Amet, tempus egestas facilisis volutpat viverra molestie
+                lobortis posuere maecenas. molestie lobortis posuere maecenas.
+                Eget sapien, gravida nequi.
               </p>
-              <button 
-                className="discover-button" 
+              <button
+                className="discover-button"
                 onClick={scrollToServices}
                 aria-label="Discover more about our services"
               >
@@ -80,18 +81,24 @@ const Slider = () => {
               </button>
             </div>
 
-            <div className="arrows" role="navigation" aria-label="Slider navigation">
-              <span aria-label={`Slide ${currentIndex + 1} of ${slides.length}`}>
+            <div
+              className="arrows"
+              role="navigation"
+              aria-label="Slider navigation"
+            >
+              <span
+                aria-label={`Slide ${currentIndex + 1} of ${slides.length}`}
+              >
                 {`${currentIndex + 1} / ${slides.length}`}
               </span>
-              <button 
+              <button
                 onClick={prevSlide}
                 aria-label="Previous slide"
                 className="arrow-button"
               >
                 &larr;
               </button>
-              <button 
+              <button
                 onClick={nextSlide}
                 aria-label="Next slide"
                 className="arrow-button"
@@ -112,7 +119,7 @@ const Slider = () => {
                 className="slider-image"
                 style={{
                   transform: `translateX(${-currentIndex * 100}%)`,
-                  transition: 'transform 0.5s ease-in-out',
+                  transition: "transform 0.5s ease-in-out",
                 }}
               />
             ))}

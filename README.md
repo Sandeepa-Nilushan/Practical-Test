@@ -1,4 +1,4 @@
-# Xiteb®️ Practical Task – FED Practical 3
+# Xiteb Practical Task – FED Practical 3
 
 ## Developed by: Sandeepa Nilushan 
 ### Senior Frontend Developer Practical Submission

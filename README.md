@@ -1,11 +1,11 @@
 # Xiteb®️ Practical Task – FED Practical 3
 
-## 👨‍💻 Developed by: Sandeepa
+## Developed by: Sandeepa Nilushan 
 ### Senior Frontend Developer Practical Submission
 
 ---
 
-## 🔧 Technologies Used
+## Technologies Used
 - React.js
 - Tailwind CSS
 - JavaScript (ES6+)
@@ -13,7 +13,7 @@
 - React Router (for navigation)
 - React Icons (for iconography)
 
-## 📁 Folder Structure
+## Folder Structure
 ```
 src/
 ├── assets/         # Static assets and images
@@ -34,11 +34,11 @@ src/
 └── App.js          # Main application component
 ```
 
-## ⏱️ Time Spent
+## Time Spent
 - Design: 2 hours
 - Development: 14 hours
 
-## 💡 Features
+## Features
 - Fully responsive design for all screen sizes
 - Semantic, accessible HTML structure
 - Smooth scrolling navigation
@@ -53,14 +53,14 @@ src/
 - User authentication system
 - Quote request functionality
 
-## 🛠️ How to Run
+## How to Run
 1. Clone the repository
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/Sandeepa-Nilushan/Practical-Test.git
    ```
 2. Navigate to project directory
    ```bash
-   cd fed-practical3
+   cd Practical-Test
    ```
 3. Install dependencies
    ```bash
@@ -68,16 +68,14 @@ src/
    ```
 4. Start development server
    ```bash
-   npm run dev
+   npm start
    ```
-5. Open [http://localhost:5173](http://localhost:5173) in your browser
+5. Open [http://localhost:5173](http://localhost:3000) in your browser
 
-## 📱 Responsive Design
+## Responsive Design
 - Mobile-first approach
 - Breakpoints for:
   - Mobile (< 640px)
   - Tablet (640px - 1024px)
   - Desktop (> 1024px)
 
-## 📬 Submission
-This project is submitted as per the instructions in the job post for the Senior Frontend Developer role at Xiteb®️. The implementation follows modern web development practices and demonstrates proficiency in React.js and Tailwind CSS.

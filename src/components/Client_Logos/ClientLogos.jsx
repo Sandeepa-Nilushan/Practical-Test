@@ -1,33 +1,33 @@
 import React, { useState, useEffect, useRef } from 'react';
-import acmeLogo from '../assets/logos/acme.png';
-import amaraLogo from '../assets/logos/amara.png';
-import asgardiaLogo from '../assets/logos/asgardia.png';
-import avenLogo from '../assets/logos/aven.png';
-import lightaiLogo from '../assets/logos/lightai.png';
-import livaLogo from '../assets/logos/liva.png';
-import earth2Logo from '../assets/logos/earth2.png';
-import hexLabLogo from '../assets/logos/hex-lab.png';
-import hexaLogo from '../assets/logos/hexa.png';
-import kyanLogo from '../assets/logos/kyan.png';
-import muzicaLogo from '../assets/logos/muzica.png';
-import uilogosLogo from '../assets/logos/uilogos.png';
+import acme from '../../assets/logos/acme.png';
+import amara from '../../assets/logos/amara.png';
+import asgardia from '../../assets/logos/asgardia.png';
+import aven from '../../assets/logos/aven.png';
+import lightai from '../../assets/logos/lightai.png';
+import liva from '../../assets/logos/liva.png';
+import earth2 from '../../assets/logos/earth2.png';
+import hexlab from '../../assets/logos/hex-lab.png';
+import hexa from '../../assets/logos/hexa.png';
+import kyan from '../../assets/logos/kyan.png';
+import muzica from '../../assets/logos/muzica.png';
+import uilogos from '../../assets/logos/uilogos.png';
 
 import './ClientLogos.css'; // We will create this CSS file next
 
 const ClientLogos = () => {
   const allLogos = [
-    { src: acmeLogo, alt: 'Acme' },
-    { src: amaraLogo, alt: 'Amara' },
-    { src: asgardiaLogo, alt: 'Asgardia' },
-    { src: avenLogo, alt: 'Aven' },
-    { src: lightaiLogo, alt: 'Lightai' },
-    { src: livaLogo, alt: 'Liva' },
-    { src: earth2Logo, alt: 'Earth2' },
-    { src: hexLabLogo, alt: 'Hex Lab' },
-    { src: hexaLogo, alt: 'Hexa' },
-    { src: kyanLogo, alt: 'Kyan' },
-    { src: muzicaLogo, alt: 'Muzica' },
-    { src: uilogosLogo, alt: 'UI Logos' },
+    { src: acme, alt: 'Acme' },
+    { src: amara, alt: 'Amara' },
+    { src: asgardia, alt: 'Asgardia' },
+    { src: aven, alt: 'Aven' },
+    { src: lightai, alt: 'Lightai' },
+    { src: liva, alt: 'Liva' },
+    { src: earth2, alt: 'Earth2' },
+    { src: hexlab, alt: 'Hex Lab' },
+    { src: hexa, alt: 'Hexa' },
+    { src: kyan, alt: 'Kyan' },
+    { src: muzica, alt: 'Muzica' },
+    { src: uilogos, alt: 'UI Logos' },
   ];
 
   const logosPerView = 5;

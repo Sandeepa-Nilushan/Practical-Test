@@ -1,9 +1,13 @@
 import React from 'react';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 import './Welcome.css';
-import mainImage from '../assets/images/microsoft-365-kTFmwxkF5bQ-unsplash.webp';
-import overlayImage from '../assets/images/mathurin-napoly-matnapo-Ygyp2kXy2I0-unsplash.webp';
+import image1 from '../../assets/images/microsoft-365-kTFmwxkF5bQ-unsplash.webp';
+import image2 from '../../assets/images/mathurin-napoly-matnapo-Ygyp2kXy2I0-unsplash.webp';
 
 function Welcome() {
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   const scrollToNews = () => {
     const newsSection = document.getElementById('news');
     if (newsSection) {
@@ -26,12 +30,23 @@ function Welcome() {
           <div className="shape triangle"></div>
           <div className="shape parallelogram"></div>
 
-          <img src={mainImage} alt="Main" className="main-img" />
+          <img src={image1} alt="Main" className="main-img" />
 
-          <img src={overlayImage} alt="Overlay" className="overlay-img" />
+          <img src={image2} alt="Overlay" className="overlay-img" />
 
-          <div className="clients-badge">
-            <h2>15,350+</h2>
+          <div className="clients-badge" ref={ref}>
+            <h2>
+              {inView ? (
+                <CountUp
+                  end={15350}
+                  duration={2}
+                  separator=","
+                  suffix="+"
+                />
+              ) : (
+                "0+"
+              )}
+            </h2>
             <p>Clients Worldwide</p>
           </div>
         </div>

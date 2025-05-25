@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowRight, FaShippingFast, FaPlane, FaRobot, FaTruckMoving, FaTruck } from 'react-icons/fa';
 import { BsArrowRight } from 'react-icons/bs';
-import airFreightImage from '../assets/images/alex-kotliarskyi-QBpZGqEMsKg-unsplash.webp';
-import droneServiceImage from '../assets/images/mathurin-napoly-matnapo-uiOUuEx1e5U-unsplash.webp';
-import logisticsImage from '../assets/images/linkedin-sales-solutions-hrhjn6ZTgrM-unsplash.webp';
-import transportImage from '../assets/images/sten-rademaker-UZUzvJEvKnI-unsplash.webp';
+import image1 from '../../assets/images/alex-kotliarskyi-QBpZGqEMsKg-unsplash.webp';
+import image2 from '../../assets/images/mathurin-napoly-matnapo-uiOUuEx1e5U-unsplash.webp';
+import image3 from '../../assets/images/linkedin-sales-solutions-hrhjn6ZTgrM-unsplash.webp';
+import image4 from '../../assets/images/sten-rademaker-UZUzvJEvKnI-unsplash.webp';
 
 const BlackCircleArrow = ({ iconSize = 'text-xs', containerClasses = '' }) => (
   <span className={`bg-black rounded-full inline-flex items-center justify-center ${containerClasses}`}>
@@ -17,25 +17,25 @@ const Services = () => {
 
   const services = [
     {
-      image: airFreightImage,
+      image: image1,
       icon: <FaPlane />,
       title: 'Air Freight Services',
       description: 'At our Auto Service garage, we are fully appreciate how difficult occur it is for people to find.',
     },
     {
-      image: droneServiceImage,
+      image: image2,
       icon: <FaRobot />,
       title: 'Drone Services',
       description: 'These are unique and often they differ from one industry to the other. Our logistics expertise.',
     },
     {
-      image: logisticsImage,
+      image: image3,
       icon: <FaTruckMoving />,
       title: 'Logistics Solutions',
       description: 'Comprehensive logistics management to optimize your supply chain and reduce costs.',
     },
     {
-      image: transportImage,
+      image: image4,
       icon: <FaTruck />,
       title: 'Transport Services',
       description: 'Efficient and reliable transport solutions for all your goods and cargo.',

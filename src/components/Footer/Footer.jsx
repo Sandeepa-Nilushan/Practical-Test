@@ -6,12 +6,12 @@ import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-pro
 import 'react-circular-progressbar/dist/styles.css';
 
 // Import images
-import Image1 from '../assets/images/krakenimages-376KN_ISplE-unsplash 1.webp';
-import Image2 from '../assets/images/paul-skorupskas-7KLa-xLbSXA-unsplash.webp';
-import Image3 from '../assets/images/icons8-team-FcLyt7lW5wg-unsplash.webp';
-import Image4 from '../assets/images/mathurin-napoly-matnapo-uiOUuEx1e5U-unsplash.webp';
-import Image5 from '../assets/images/mathurin-napoly-matnapo-Ygyp2kXy2I0-unsplash.webp';
-import Image6 from '../assets/images/alex-kotliarskyi-QBpZGqEMsKg-unsplash.webp';
+import image1 from '../../assets/images/krakenimages-376KN_ISplE-unsplash 1.webp';
+import image2 from '../../assets/images/paul-skorupskas-7KLa-xLbSXA-unsplash.webp';
+import image3 from '../../assets/images/icons8-team-FcLyt7lW5wg-unsplash.webp';
+import image4 from '../../assets/images/mathurin-napoly-matnapo-uiOUuEx1e5U-unsplash.webp';
+import image5 from '../../assets/images/mathurin-napoly-matnapo-Ygyp2kXy2I0-unsplash.webp';
+import image6 from '../../assets/images/alex-kotliarskyi-QBpZGqEMsKg-unsplash.webp';
 
 const Footer = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -188,12 +188,12 @@ const Footer = () => {
             <h4 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Gallery</h4>
             <div className="w-16 sm:w-20 border-b-2 border-dashed border-yellow-500 mb-6 sm:mb-10"></div>
             <div className="grid grid-cols-3 gap-1 sm:gap-2">
-              <img src={Image1} alt="Gallery Image 1" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={Image2} alt="Gallery Image 2" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={Image3} alt="Gallery Image 3" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={Image4} alt="Gallery Image 4" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={Image5} alt="Gallery Image 5" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={Image6} alt="Gallery Image 6" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
+              <img src={image1} alt="Gallery Image 1" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
+              <img src={image2} alt="Gallery Image 2" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
+              <img src={image3} alt="Gallery Image 3" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
+              <img src={image4} alt="Gallery Image 4" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
+              <img src={image5} alt="Gallery Image 5" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
+              <img src={image6} alt="Gallery Image 6" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
             </div>
           </div>
         </div>

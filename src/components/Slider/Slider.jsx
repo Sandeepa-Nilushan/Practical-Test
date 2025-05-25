@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Slider.css';
-import sliderImage1 from '../assets/images/austin-distel-rxpThOwuVgE-unsplash.webp';
-import sliderImage2 from '../assets/images/microsoft-365-MFK0JpFU13U-unsplash.webp';
+import image1 from '../../assets/images/austin-distel-rxpThOwuVgE-unsplash.webp';
+import image2 from '../../assets/images/microsoft-365-MFK0JpFU13U-unsplash.webp';
 
 const slides = [
   {
     id: 1,
-    image: sliderImage1,
+    image: image1,
     heading: 'Best Shipping',
     highlight: 'Partner',
   },
   {
     id: 2,
-    image: sliderImage2,
+    image: image2,
     heading: 'Global Logistic',
     highlight: 'Network',
   },
@@ -20,6 +20,16 @@ const slides = [
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -32,7 +42,7 @@ const Slider = () => {
   const scrollToServices = () => {
     const servicesSection = document.getElementById('services');
     if (servicesSection) {
-      const headerOffset = 100; // Adjust this value as needed
+      const headerOffset = isMobile ? 80 : 100; // Adjusted offset for mobile
       const elementPosition = servicesSection.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -61,13 +71,33 @@ const Slider = () => {
                 posuere maecenas. molestie lobortis posuere maecenas. Eget sapien,
                 gravida nequi.
               </p>
-              <button className="discover-button" onClick={scrollToServices}>DISCOVER MORE</button>
+              <button 
+                className="discover-button" 
+                onClick={scrollToServices}
+                aria-label="Discover more about our services"
+              >
+                DISCOVER MORE
+              </button>
             </div>
 
-            <div className="arrows">
-              <span>{`${currentIndex + 1} / ${slides.length}`}</span>
-              <span onClick={prevSlide}>&larr;</span>
-              <span onClick={nextSlide}>&rarr;</span>
+            <div className="arrows" role="navigation" aria-label="Slider navigation">
+              <span aria-label={`Slide ${currentIndex + 1} of ${slides.length}`}>
+                {`${currentIndex + 1} / ${slides.length}`}
+              </span>
+              <button 
+                onClick={prevSlide}
+                aria-label="Previous slide"
+                className="arrow-button"
+              >
+                &larr;
+              </button>
+              <button 
+                onClick={nextSlide}
+                aria-label="Next slide"
+                className="arrow-button"
+              >
+                &rarr;
+              </button>
             </div>
           </div>
         </div>
@@ -78,7 +108,7 @@ const Slider = () => {
               <img
                 key={slide.id}
                 src={slide.image}
-                alt={`Slide ${slide.id}`}
+                alt={`${slide.heading} ${slide.highlight}`}
                 className="slider-image"
                 style={{
                   transform: `translateX(${-currentIndex * 100}%)`,

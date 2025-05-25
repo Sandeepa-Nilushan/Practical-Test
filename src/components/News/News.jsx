@@ -1,10 +1,10 @@
 import React from 'react';
 import './News.css';
 import { FaUser, FaComment } from 'react-icons/fa';
-import image1 from '../assets/images/krakenimages-376KN_ISplE-unsplash 1.webp';
-import image2 from '../assets/images/paul-skorupskas-7KLa-xLbSXA-unsplash.webp';
-import image3 from '../assets/images/austin-distel-rxpThOwuVgE-unsplash.webp';
-import image4 from '../assets/images/alex-kotliarskyi-QBpZGqEMsKg-unsplash.webp';
+import image1 from '../../assets/images/krakenimages-376KN_ISplE-unsplash 1.webp';
+import image2 from '../../assets/images/paul-skorupskas-7KLa-xLbSXA-unsplash.webp';
+import image3 from '../../assets/images/austin-distel-rxpThOwuVgE-unsplash.webp';
+import image4 from '../../assets/images/alex-kotliarskyi-QBpZGqEMsKg-unsplash.webp';
 
 const News = () => {
   return (

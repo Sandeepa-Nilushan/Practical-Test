@@ -1,0 +1,515 @@
+/* Base Styles */
+.welcome-section {
+  background: #fff;
+  padding: 80px 80px 80px 120px;
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  gap: 120px;
+  padding: 0 80px;
+  align-items: center;
+  position: relative;
+  height: 500px;
+}
+
+.image-area {
+  position: relative;
+  width: 50%;
+}
+
+.main-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.overlay-box {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 120px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overlay-box img {
+  width: 100%;
+  height: auto;
+}
+
+.client-badge {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  background-color: #f97316;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.client-badge h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.client-badge p {
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+
+.text-content {
+  width: 50%;
+}
+
+.text-content h1 {
+  font-size: 36px;
+  color: #222;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.text-content .highlight {
+  color: #f97316;
+}
+
+/* Image Side */
+.welcome-images {
+  width: 50%;
+  height: 100%;
+}
+
+.main-img {
+  position: absolute;
+  top: 0;
+  right: calc(50% + 60px);
+  width: 30%;
+  height: 80%;
+  display: block;
+  border-radius: 8px;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.overlay-img {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 20%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+}
+
+.shape {
+  position: absolute;
+  z-index: 4;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid #f97316;
+  border-right: 50px solid transparent;
+  position: absolute;
+  top: 430px;
+  left: 0;
+  transform: rotate(2deg);
+}
+
+.parallelogram {
+  width: 50px;
+  height: 180px;
+  background: #0f5f6b;
+  clip-path: polygon(0% 0%, 100% 30%, 100% 100%, 0% 70%);
+  top: 270px;
+  left: 0;
+}
+
+.text-parallelogram {
+  position: absolute;
+  top: -90px;
+  left: -20px;
+  width: 60px;
+  height: 200px;
+  background-color: #f0f0f0;
+  clip-path: polygon(0% 0%, 100% 30%, 100% 100%, 0% 70%);
+  z-index: 0;
+}
+
+.clients-badge {
+  position: absolute;
+  bottom: 40px;
+  right: calc(50%);
+  transform: none;
+  background-color: #f97316;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 0;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  transition: transform 0.3s ease;
+}
+
+.clients-badge::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -20px;
+  width: 0;
+  height: 0;
+  border-top: 50px solid #f97316;
+  border-right: 40px solid transparent;
+  transform: rotate(-270deg);
+}
+
+.clients-badge h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  min-width: 100px;
+  display: inline-block;
+}
+
+.clients-badge p {
+  margin: 4px 0 0;
+  font-size: 14px;
+}
+
+/* Text Side */
+.welcome-text {
+  width: 50%;
+  z-index: 5;
+  position: relative;
+}
+
+.welcome-text h1 {
+  font-size: 36px;
+  color: #222;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  z-index: 5;
+  position: relative;
+}
+
+.highlight {
+  color: #f97316;
+}
+
+.welcome-text p {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.welcome-text button {
+  background-color: #f0f0f0;
+  color: #0f5f6b;
+  border: none;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.welcome-text button:hover {
+  background-color: #e06010;
+}
+
+/* Responsive Styles */
+@media (max-width: 1280px) {
+  .welcome-container {
+    gap: 80px;
+    padding: 0 60px;
+  }
+
+  .welcome-section {
+    padding: 80px 60px 80px 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .welcome-container {
+    gap: 60px;
+    height: 450px;
+    padding: 0 60px;
+  }
+
+  .welcome-section {
+    padding: 80px 60px 80px 100px;
+  }
+
+  .welcome-text h1 {
+    font-size: 32px;
+  }
+
+  .main-img {
+    right: calc(50% + 40px);
+    width: 35%;
+  }
+
+  .overlay-img {
+    width: 25%;
+  }
+
+  .clients-badge {
+    padding: 15px 25px;
+  }
+
+  .clients-badge h2 {
+    font-size: 22px;
+  }
+
+  .welcome-section .shape.triangle {
+    border-bottom: 45px solid #f97316;
+    border-right: 45px solid transparent;
+    top: 400px;
+  }
+
+  .welcome-section .shape.parallelogram {
+    width: 45px;
+    height: 160px;
+    top: 250px;
+  }
+}
+
+@media (max-width: 950px) {
+  .welcome-section {
+    padding: 100px 50px 60px 80px;
+  }
+
+  .welcome-container {
+    gap: 40px;
+    padding: 0 40px;
+  }
+
+  .welcome-section .shape.triangle,
+  .welcome-section .shape.parallelogram,
+  .welcome-section .text-parallelogram {
+    display: none;
+  }
+
+  .welcome-text {
+    padding-right: 20px;
+  }
+
+  .main-img {
+    right: calc(50% + 30px);
+    width: 40%;
+  }
+
+  .overlay-img {
+    width: 30%;
+  }
+}
+
+@media (max-width: 900px) {
+  .welcome-section {
+    padding: 120px 40px 60px 100px;
+  }
+
+  .welcome-container {
+    flex-direction: column;
+    height: auto;
+    gap: 60px;
+    padding: 0 40px;
+    margin-top: 40px;
+  }
+
+  .welcome-images {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .welcome-text {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .main-img {
+    position: relative;
+    right: auto;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .overlay-img {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 35%;
+    height: auto;
+  }
+
+  .clients-badge {
+    right: 40px;
+    bottom: 40px;
+    padding: 20px 30px;
+  }
+
+  .clients-badge h2 {
+    font-size: 24px;
+  }
+
+  .clients-badge p {
+    font-size: 14px;
+  }
+
+  .welcome-text button {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .welcome-section {
+    padding: 80px 20px 40px 20px;
+  }
+
+  .welcome-container {
+    gap: 30px;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .welcome-images {
+    height: 300px;
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+  .welcome-text {
+    padding: 0 20px;
+  }
+
+  .main-img {
+    width: 75%;
+  }
+
+  .overlay-img {
+    width: 25%;
+    bottom: 0;
+    left: 20px;
+  }
+
+  .clients-badge {
+    padding: 12px 20px;
+    left: 450px;
+    bottom: 20px;
+    width: 120px;
+  }
+
+  .clients-badge h2 {
+    font-size: 16px;
+  }
+
+  .clients-badge p {
+    font-size: 11px;
+    margin-top: 2px;
+  }
+
+  .welcome-text h1 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .welcome-text p {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .welcome-text button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section {
+    padding: 60px 15px 30px 15px;
+  }
+
+  .welcome-container {
+    gap: 25px;
+  }
+
+  .welcome-images {
+    height: 250px;
+    padding-left: 15px;
+  }
+
+  .welcome-text {
+    padding: 0 15px;
+  }
+
+  .main-img {
+    width: 80%;
+  }
+
+  .overlay-img {
+    width: 35%;
+    left: 15px;
+  }
+
+  .clients-badge {
+    padding: 10px 15px;
+    left: 250px;
+    bottom: 15px;
+    width: 100px;
+  }
+
+  .clients-badge h2 {
+    font-size: 14px;
+  }
+
+  .clients-badge p {
+    font-size: 10px;
+    margin-top: 1px;
+  }
+
+  .welcome-text h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .welcome-text p {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .welcome-text button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+

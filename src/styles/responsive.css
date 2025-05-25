@@ -1,0 +1,90 @@
+/* Responsive Design Guidelines */
+
+/* Base Container */
+.container {
+  @apply w-full px-4 mx-auto;
+}
+
+/* Responsive Typography */
+h1 {
+  @apply text-2xl md:text-3xl lg:text-4xl font-bold;
+}
+
+h2 {
+  @apply text-xl md:text-2xl lg:text-3xl font-semibold;
+}
+
+h3 {
+  @apply text-lg md:text-xl lg:text-2xl font-medium;
+}
+
+p {
+  @apply text-base md:text-lg;
+}
+
+/* Responsive Grid Layout */
+.grid-container {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+/* Responsive Flex Layout */
+.flex-container {
+  @apply flex flex-col md:flex-row;
+}
+
+/* Responsive Spacing */
+.section {
+  @apply py-4 md:py-6 lg:py-8;
+}
+
+/* Responsive Images */
+.responsive-image {
+  @apply w-full h-auto object-cover;
+}
+
+/* Responsive Navigation */
+.nav-container {
+  @apply flex flex-col md:flex-row items-center;
+}
+
+/* Responsive Cards */
+.card {
+  @apply p-4 md:p-6 rounded-lg shadow-md;
+}
+
+/* Responsive Forms */
+.form-group {
+  @apply mb-4 md:mb-6;
+}
+
+.form-input {
+  @apply w-full p-2 md:p-3 rounded;
+}
+
+/* Responsive Buttons */
+.button {
+  @apply px-4 py-2 md:px-6 md:py-3 rounded;
+}
+
+/* Responsive Margins and Padding */
+.margin-responsive {
+  @apply m-2 md:m-4 lg:m-6;
+}
+
+.padding-responsive {
+  @apply p-2 md:p-4 lg:p-6;
+}
+
+/* Responsive Tables */
+.table-container {
+  @apply overflow-x-auto;
+}
+
+/* Media Query Breakpoints Reference */
+/*
+sm: 640px   - Small devices (phones)
+md: 768px   - Medium devices (tablets)
+lg: 1024px  - Large devices (laptops)
+xl: 1280px  - Extra large devices (desktops)
+2xl: 1536px - 2X Extra large devices
+*/ 

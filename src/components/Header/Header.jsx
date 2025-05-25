@@ -30,17 +30,17 @@ const Header = () => {
       <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50 border-b border-gray-200 min-h-[80px]">
         <div className="container mx-auto px-4 md:px-8 h-[80px] flex items-center justify-between max-w-[1400px]">
           {/* Logo */}
-          <Link to="/" className="flex items-center text-xl font-bold tracking-wide text-black md:text-2xl">
-            <span className="mr-2 text-yellow-500">◆</span> Cargo <span className="ml-1 text-yellow-500">TON</span>
+          <Link to="/" className="flex items-center text-xl md:text-2xl font-bold text-black tracking-wide">
+            <span className="text-yellow-500 mr-2">◆</span> Cargo <span className="text-yellow-500 ml-1">TON</span>
           </Link>
 
           {/* Mobile Menu Button */}
           <button 
             onClick={toggleMobileMenu}
-            className="p-2 transition rounded-lg md:hidden hover:bg-gray-100"
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"
             aria-label="Toggle menu"
           >
-            <div className="flex flex-col justify-between w-6 h-5">
+            <div className="w-6 h-5 flex flex-col justify-between">
               <span className={`w-full h-0.5 bg-black transform transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
               <span className={`w-full h-0.5 bg-black transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
               <span className={`w-full h-0.5 bg-black transform transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
@@ -48,8 +48,8 @@ const Header = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="items-center hidden ml-auto space-x-12 md:flex">
-            <nav className="flex space-x-6 font-medium text-gray-700">
+          <div className="hidden md:flex items-center ml-auto space-x-12">
+            <nav className="flex space-x-6 text-gray-700 font-medium">
               {/* HOME */}
               <Link
                 to="/"
@@ -70,7 +70,7 @@ const Header = () => {
                 </a>
                 {openDropdown === 'pages' && (
                   <div className="absolute top-[calc(100%+1px)] left-0 w-48 bg-white rounded-sm shadow-lg border border-gray-100 py-1 z-50">
-                    <div className="absolute left-0 right-0 h-1 -top-1"></div>
+                    <div className="absolute -top-1 left-0 right-0 h-1"></div>
                     <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
                     <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact Us</a>
                     <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Careers</a>
@@ -99,7 +99,7 @@ const Header = () => {
                 </a>
                 {openDropdown === 'services' && (
                   <div className="absolute top-[calc(100%+1px)] left-0 w-48 bg-white rounded-sm shadow-lg border border-gray-100 py-1 z-50">
-                    <div className="absolute left-0 right-0 h-1 -top-1"></div>
+                    <div className="absolute -top-1 left-0 right-0 h-1"></div>
                     <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Ocean Freight</a>
                     <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Air Freight</a>
                     <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Land Transport</a>
@@ -120,7 +120,7 @@ const Header = () => {
                 </a>
                 {openDropdown === 'blog' && (
                   <div className="absolute top-[calc(100%+1px)] left-0 w-48 bg-white rounded-sm shadow-lg border border-gray-100 py-1 z-50">
-                    <div className="absolute left-0 right-0 h-1 -top-1"></div>
+                    <div className="absolute -top-1 left-0 right-0 h-1"></div>
                     <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Latest Articles</a>
                     <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Industry News</a>
                     <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Case Studies</a>
@@ -133,14 +133,14 @@ const Header = () => {
             <div className="flex space-x-4">
               <button 
                 onClick={() => setIsQuoteModalOpen(true)}
-                className="flex items-center px-4 py-2 space-x-2 font-semibold text-black transition bg-yellow-500 rounded-sm md:px-6 hover:bg-yellow-600"
+                className="bg-yellow-500 text-black px-4 md:px-6 py-2 rounded-sm font-semibold hover:bg-yellow-600 transition flex items-center space-x-2"
               >
                 <span className="hidden lg:inline">GET A QUOTE</span>
                 <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
-              <Link to="/signin" className="flex items-center px-4 py-2 space-x-2 font-semibold text-white transition bg-black rounded-sm md:px-6 hover:bg-gray-800">
+              <Link to="/signin" className="bg-black text-white px-4 md:px-6 py-2 rounded-sm font-semibold hover:bg-gray-800 transition flex items-center space-x-2">
                 <span className="hidden lg:inline">SIGN IN</span>
                 <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
@@ -155,7 +155,7 @@ const Header = () => {
           {/* Close Button */}
           <button 
             onClick={() => setIsMobileMenuOpen(false)}
-            className="absolute z-50 p-2 transition rounded-lg top-6 right-6 hover:bg-gray-100"
+            className="absolute top-6 right-6 p-2 rounded-lg hover:bg-gray-100 transition z-50"
             aria-label="Close menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,8 +163,8 @@ const Header = () => {
             </svg>
           </button>
 
-          <div className="px-6 pt-24">
-            <nav className="flex flex-col space-y-6 font-medium text-gray-700">
+          <div className="pt-24 px-6">
+            <nav className="flex flex-col space-y-6 text-gray-700 font-medium">
               <Link
                 to="/"
                 className={`hover:text-yellow-500 transition ${activeLink === 'home' ? 'text-yellow-500' : ''}`}
@@ -178,7 +178,7 @@ const Header = () => {
                 <div>
                   <button
                     onClick={() => setOpenDropdown(openDropdown === 'pages' ? null : 'pages')}
-                    className="flex items-center justify-between w-full transition hover:text-yellow-500"
+                    className="flex items-center justify-between w-full hover:text-yellow-500 transition"
                   >
                     PAGES <span className="text-xs">▼</span>
                   </button>
@@ -203,7 +203,7 @@ const Header = () => {
                 <div>
                   <button
                     onClick={() => setOpenDropdown(openDropdown === 'services' ? null : 'services')}
-                    className="flex items-center justify-between w-full transition hover:text-yellow-500"
+                    className="flex items-center justify-between w-full hover:text-yellow-500 transition"
                   >
                     SERVICES <span className="text-xs">▼</span>
                   </button>
@@ -221,7 +221,7 @@ const Header = () => {
                 <div>
                   <button
                     onClick={() => setOpenDropdown(openDropdown === 'blog' ? null : 'blog')}
-                    className="flex items-center justify-between w-full transition hover:text-yellow-500"
+                    className="flex items-center justify-between w-full hover:text-yellow-500 transition"
                   >
                     BLOG <span className="text-xs">▼</span>
                   </button>
@@ -243,13 +243,13 @@ const Header = () => {
                   setIsQuoteModalOpen(true);
                   setIsMobileMenuOpen(false);
                 }}
-                className="w-full px-6 py-3 font-semibold text-black transition bg-yellow-500 rounded-sm hover:bg-yellow-600"
+                className="w-full bg-yellow-500 text-black px-6 py-3 rounded-sm font-semibold hover:bg-yellow-600 transition"
               >
                 GET A QUOTE
               </button>
               <Link 
                 to="/signin" 
-                className="block w-full px-6 py-3 font-semibold text-center text-white transition bg-black rounded-sm hover:bg-gray-800"
+                className="block w-full text-center bg-black text-white px-6 py-3 rounded-sm font-semibold hover:bg-gray-800 transition"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 SIGN IN

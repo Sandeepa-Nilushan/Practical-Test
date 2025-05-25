@@ -30,10 +30,34 @@ const ClientLogos = () => {
     { src: uilogos, alt: 'UI Logos' },
   ];
 
-  const logosPerView = 5;
+  const [logosPerView, setLogosPerView] = useState(5);
   const [currentIndex, setCurrentIndex] = useState(0);
   const logosContainerRef = useRef(null);
   const [isTransitioning, setIsTransitioning] = useState(true);
+
+  // Update logosPerView based on screen width
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1023) {
+        setLogosPerView(5);
+      } else if (window.innerWidth > 767) {
+        setLogosPerView(3);
+      } else if (window.innerWidth > 479) {
+        setLogosPerView(1);
+      } else {
+        setLogosPerView(1);
+      }
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Duplicate logos to create seamless loop effect
   const extendedLogos = [...allLogos, ...allLogos.slice(0, logosPerView)];
@@ -59,11 +83,9 @@ const ClientLogos = () => {
     logosContainerRef.current.addEventListener('transitionend', handleTransitionEnd);
 
     if (!isTransitioning) {
-        // Force a reflow to apply the transition: none style before re-enabling
-        // Assigning to a dummy variable to satisfy ESLint no-unused-expressions
-        const _ = logosContainerRef.current.offsetWidth;
-        setIsTransitioning(true);
-      }
+      const _ = logosContainerRef.current.offsetWidth;
+      setIsTransitioning(true);
+    }
 
     return () => {
       if (logosContainerRef.current) {
@@ -76,8 +98,7 @@ const ClientLogos = () => {
   const middleLogoIndex = Math.floor(logosPerView / 2);
 
   // The transform value now moves by the calculated width of one logo including margin
-  // This assumes all logos will render at roughly the same width due to the CSS rule
-  const transformValue = `translateX(-${currentIndex * (logosContainerRef.current ? logosContainerRef.current.children[0].offsetWidth + 100 : 0)}px)`; // 20 accounts for 10px margin on each side
+  const transformValue = `translateX(-${currentIndex * (logosContainerRef.current ? logosContainerRef.current.children[0].offsetWidth + 100 : 0)}px)`;
 
   return (
     <section className="client-logos-section">
@@ -92,7 +113,6 @@ const ClientLogos = () => {
           }}
         >
           {extendedLogos.map((logo, index) => {
-            // Determine if this logo is currently the middle one in the visible window
             const logoPositionInView = index - currentIndex;
             const isMiddle = logoPositionInView === middleLogoIndex;
 

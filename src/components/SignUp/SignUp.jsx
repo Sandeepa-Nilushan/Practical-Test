@@ -1,28 +1,30 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./SignUp.css";
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './SignUp.css';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
+    fullName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
   });
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevState) => ({
+    setFormData(prevState => ({
       ...prevState,
-      [name]: value,
+      [name]: value
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    navigate("/");
+    // Handle sign up logic here
+    console.log('Form submitted:', formData);
+    // After successful sign up, redirect to home
+    navigate('/');
   };
 
   return (
@@ -34,12 +36,11 @@ const SignUp = () => {
               Create <span className="highlight">Account</span>
             </h1>
             <p className="signup-description">
-              Join us to streamline your logistics operations and manage your
-              shipments efficiently
+              Join us to streamline your logistics operations and manage your shipments efficiently
             </p>
           </div>
         </div>
-
+        
         <div className="signup-right-column">
           <div className="signup-form-container">
             <form onSubmit={handleSubmit} className="signup-form">
@@ -68,7 +69,7 @@ const SignUp = () => {
                   required
                 />
               </div>
-
+              
               <div className="form-group">
                 <label htmlFor="password">Password</label>
                 <input
@@ -110,4 +111,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUp; 

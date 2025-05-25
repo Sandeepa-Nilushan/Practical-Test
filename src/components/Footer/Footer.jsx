@@ -4,6 +4,7 @@ import { FaPhone, FaMapMarkerAlt, FaCog, FaFacebookF, FaTwitter, FaLinkedinIn, F
 // Import react-circular-progressbar components and styles
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import './Footer.css';
 
 // Import images
 import image1 from '../../assets/images/krakenimages-376KN_ISplE-unsplash 1.webp';
@@ -79,27 +80,27 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-gray-700 text-gray-300 py-6 sm:py-8 md:py-10">
-      <div className="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 max-w-[1440px]">
+    <footer className="footer">
+      <div className="container">
         {/* Weekly Newsletter */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 items-center mb-16 sm:mb-24 md:mb-36">
-          <div className="md:col-span-2 lg:col-span-2 flex items-center">
+        <div className="newsletter-grid">
+          <div className="newsletter-content">
             <div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">Weekly Newsletter</h3>
-              <p className="text-sm sm:text-base text-gray-400">There are many variations of passages of lorem ipsum available.</p>
+              <h3 className="newsletter-title">Weekly Newsletter</h3>
+              <p className="newsletter-description">There are many variations of passages of lorem ipsum available.</p>
             </div>
           </div>
-          <div className="md:col-span-2 lg:col-span-2 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2 w-full">
+          <div className="newsletter-form">
             <input
               type="email"
               placeholder="Enter Your Mail"
               value={emailInput}
               onChange={(e) => setEmailInput(e.target.value)}
-              className="w-full sm:flex-grow px-3 sm:px-4 py-2 sm:py-3 rounded focus:outline-none text-gray-800 text-sm sm:text-base"
+              className="newsletter-input"
             />
             <button
               onClick={handleSubscribeClick}
-              className="w-full sm:w-auto bg-yellow-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded font-semibold hover:bg-yellow-600 transition text-sm sm:text-base"
+              className="newsletter-button"
             >
               SUBSCRIBE
             </button>
@@ -107,44 +108,44 @@ const Footer = () => {
         </div>
 
         {/* Footer Links and Gallery */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
+        <div className="footer-grid">
           {/* About Us */}
           <div>
-            <h4 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">About Us</h4>
-            <div className="w-16 sm:w-20 border-b-2 border-dashed border-yellow-500 mb-6 sm:mb-10"></div>
-            <p className="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p className="text-sm sm:text-base text-gray-400 flex items-center mb-2 cursor-pointer hover:text-white">
-              <span className="mr-2"><FaPhone className="text-gray-400" /></span>
-              <span className="mx-2">|</span>
+            <h4 className="footer-section-title">About Us</h4>
+            <div className="section-divider"></div>
+            <p className="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p className="contact-item">
+              <span className="icon"><FaPhone /></span>
+              <span className="separator">|</span>
               <span>(+94) 11 434 7575</span>
             </p>
-            <p className="text-sm sm:text-base text-gray-400 flex items-center cursor-pointer hover:text-white">
-              <span className="mr-2"><FaMapMarkerAlt className="text-gray-400" /></span>
-              <span className="mx-2">|</span>
+            <p className="contact-item">
+              <span className="icon"><FaMapMarkerAlt /></span>
+              <span className="separator">|</span>
               <span>42 Lily Ave, Colombo 00600</span>
             </p>
           </div>
 
           {/* Latest News */}
           <div>
-            <h4 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Latest News</h4>
-            <div className="w-16 sm:w-20 border-b-2 border-dashed border-yellow-500 mb-6 sm:mb-10"></div>
+            <h4 className="footer-section-title">Latest News</h4>
+            <div className="section-divider"></div>
             <ul>
-              <li className="mb-4 sm:mb-6">
-                <div className="flex items-start">
-                  <span className="mr-3 sm:mr-4 text-yellow-500 mt-1">&gt;</span>
+              <li className="news-item">
+                <div className="news-content">
+                  <span className="news-arrow">&gt;</span>
                   <div>
-                    <p className="text-sm sm:text-base text-gray-400 mb-1 sm:mb-2 cursor-pointer hover:text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-                    <span className="text-xs sm:text-sm text-gray-500">5 Minutes Ago</span>
+                    <p className="news-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                    <span className="news-time">5 Minutes Ago</span>
                   </div>
                 </div>
               </li>
-              <li>
-                <div className="flex items-start">
-                  <span className="mr-3 sm:mr-4 text-yellow-500 mt-1">&gt;</span>
+              <li className="news-item">
+                <div className="news-content">
+                  <span className="news-arrow">&gt;</span>
                   <div>
-                    <p className="text-sm sm:text-base text-gray-400 mb-1 sm:mb-2 cursor-pointer hover:text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-                    <span className="text-xs sm:text-sm text-gray-500">5 Minutes Ago</span>
+                    <p className="news-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                    <span className="news-time">5 Minutes Ago</span>
                   </div>
                 </div>
               </li>
@@ -153,102 +154,80 @@ const Footer = () => {
 
           {/* Customer Service */}
           <div>
-            <h4 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Customer Service</h4>
-            <div className="w-16 sm:w-20 border-b-2 border-dashed border-yellow-500 mb-6 sm:mb-10"></div>
-            <ul className="space-y-1 sm:space-y-2">
-              <li className="flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
-                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">Support Forums</span>
+            <h4 className="footer-section-title">Customer Service</h4>
+            <div className="section-divider"></div>
+            <ul className="service-list">
+              <li className="service-item">
+                <span className="service-icon"><FaRegHandPointRight /></span>
+                <span className="service-link">Support Forums</span>
               </li>
-              <li className="flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
-                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">Communication</span>
+              <li className="service-item">
+                <span className="service-icon"><FaRegHandPointRight /></span>
+                <span className="service-link">Communication</span>
               </li>
-              <li className="flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
-                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">FAQS</span>
+              <li className="service-item">
+                <span className="service-icon"><FaRegHandPointRight /></span>
+                <span className="service-link">FAQS</span>
               </li>
-              <li className="flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
-                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">Privacy Policy</span>
+              <li className="service-item">
+                <span className="service-icon"><FaRegHandPointRight /></span>
+                <span className="service-link">Privacy Policy</span>
               </li>
-              <li className="flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
-                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">Rules & Condition</span>
+              <li className="service-item">
+                <span className="service-icon"><FaRegHandPointRight /></span>
+                <span className="service-link">Rules & Condition</span>
               </li>
-              <li className="flex items-center">
-                <span className="mr-2 text-gray-400"><FaRegHandPointRight /></span> 
-                <span className="text-sm sm:text-base text-gray-400 cursor-pointer hover:text-white">Contact Us</span>
+              <li className="service-item">
+                <span className="service-icon"><FaRegHandPointRight /></span>
+                <span className="service-link">Contact Us</span>
               </li>
             </ul>
           </div>
 
           {/* Gallery */}
           <div>
-            <h4 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Gallery</h4>
-            <div className="w-16 sm:w-20 border-b-2 border-dashed border-yellow-500 mb-6 sm:mb-10"></div>
-            <div className="grid grid-cols-3 gap-1 sm:gap-2">
-              <img src={image1} alt="Gallery Image 1" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={image2} alt="Gallery Image 2" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={image3} alt="Gallery Image 3" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={image4} alt="Gallery Image 4" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={image5} alt="Gallery Image 5" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
-              <img src={image6} alt="Gallery Image 6" className="w-full h-16 sm:h-20 object-cover rounded-sm transition-transform duration-200 hover:scale-110" />
+            <h4 className="footer-section-title">Gallery</h4>
+            <div className="section-divider"></div>
+            <div className="gallery-grid">
+              <img src={image1} alt="Gallery Image 1" className="gallery-image" />
+              <img src={image2} alt="Gallery Image 2" className="gallery-image" />
+              <img src={image3} alt="Gallery Image 3" className="gallery-image" />
+              <img src={image4} alt="Gallery Image 4" className="gallery-image" />
+              <img src={image5} alt="Gallery Image 5" className="gallery-image" />
+              <img src={image6} alt="Gallery Image 6" className="gallery-image" />
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between border-t border-gray-600 pt-6 sm:pt-8 text-gray-400 text-xs sm:text-sm">
-          <div className="mb-4 sm:mb-0">
-            Copyright © 2025 All Rights Reserved. Site By <span className="text-yellow-500">Sandeepa®</span>
+        <div className="bottom-bar">
+          <div className="copyright">
+            Copyright © 2025 All Rights Reserved. Site By <span className="copyright-highlight">Sandeepa®</span>
           </div>
-          <div className="flex space-x-3 sm:space-x-4 text-white">
-            <a href="#" className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaFacebookF /></a>
-            <a href="#" className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaTwitter /></a>
-            <a href="#" className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaLinkedinIn /></a>
-            <a href="#" className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaBehance /></a>
-            <a href="#" className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-gray-400 rounded-full hover:bg-yellow-500 transition text-white"><FaDribbble /></a>
+          <div className="social-links">
+            <a href="#" className="social-link"><FaFacebookF /></a>
+            <a href="#" className="social-link"><FaTwitter /></a>
+            <a href="#" className="social-link"><FaLinkedinIn /></a>
+            <a href="#" className="social-link"><FaBehance /></a>
+            <a href="#" className="social-link"><FaDribbble /></a>
           </div>
         </div>
 
-        {/* Scroll to Top Button */}
-        {isVisible && (
-          <div className="fixed bottom-6 sm:bottom-10 right-6 sm:right-8 md:right-12 lg:right-16 xl:right-20 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
-            <CircularProgressbarWithChildren
-              value={scrollProgress}
-              strokeWidth={10}
-              styles={buildStyles({
-                pathColor: `black`,
-                trailColor: `#4B5563`,
-                backgroundColor: 'transparent',
-              })}
-            >
-              <div
-                onClick={scrollToTop}
-                className="bg-yellow-500 text-white text-2xl sm:text-3xl font-extrabold p-2 rounded-full cursor-pointer hover:bg-yellow-600 transition flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10"
-              >
-                ↑
-              </div>
-            </CircularProgressbarWithChildren>
-          </div>
-        )}
-
         {/* Popup Modal */}
         {isModalOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-6 sm:p-8 md:p-12">
-            <div className="bg-gray-700 p-4 sm:p-6 rounded-lg shadow-lg text-white max-w-sm w-full relative mx-4 sm:mx-6 md:mx-8">
+          <div className="modal-overlay">
+            <div className="modal-content">
               <button
                 onClick={closeModal}
-                className="absolute top-2 right-2 text-gray-400 hover:text-white text-xl"
+                className="modal-close"
               >
                 &times;
               </button>
-              <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-center">Subscription Successful!</h4>
-              <p className="text-sm sm:text-base text-center">Welcome aboard! You'll now receive the latest news at {emailInput}.</p>
+              <h4 className="modal-title">Subscription Successful!</h4>
+              <p className="modal-message">Welcome aboard! You'll now receive the latest news at {emailInput}.</p>
               <button
                 onClick={closeModal}
-                className="mt-4 sm:mt-6 bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-600 transition block mx-auto text-sm sm:text-base"
+                className="modal-button"
               >
                 Close
               </button>
@@ -256,6 +235,28 @@ const Footer = () => {
           </div>
         )}
       </div>
+
+      {/* Scroll to Top Button - Moved outside container */}
+      {isVisible && (
+        <div className="scroll-button-container">
+          <CircularProgressbarWithChildren
+            value={scrollProgress}
+            strokeWidth={10}
+            styles={buildStyles({
+              pathColor: `black`,
+              trailColor: `#4B5563`,
+              backgroundColor: 'transparent',
+            })}
+          >
+            <div
+              onClick={scrollToTop}
+              className="scroll-button"
+            >
+              ↑
+            </div>
+          </CircularProgressbarWithChildren>
+        </div>
+      )}
     </footer>
   );
 };

@@ -87,7 +87,7 @@ const Footer = () => {
           <div className="newsletter-content">
             <div>
               <h3 className="newsletter-title">Weekly Newsletter</h3>
-              <p className="newsletter-description">There are many variations of passages of lorem ipsum available.</p>
+              <p className="newsletter-description">Stay updated with the latest logistics trends, shipping innovations, and industry insights delivered to your inbox every week.</p>
             </div>
           </div>
           <div className="newsletter-form">
@@ -113,7 +113,7 @@ const Footer = () => {
           <div>
             <h4 className="footer-section-title">About Us</h4>
             <div className="section-divider"></div>
-            <p className="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p className="footer-text">TransMax delivers innovative logistics solutions worldwide, connecting businesses through efficient supply chains.</p>
             <p className="contact-item">
               <span className="icon"><FaPhone /></span>
               <span className="separator">|</span>
@@ -135,7 +135,7 @@ const Footer = () => {
                 <div className="news-content">
                   <span className="news-arrow">&gt;</span>
                   <div>
-                    <p className="news-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                    <p className="news-text">TransMax expands operations to 10 new countries, strengthening global logistics network.</p>
                     <span className="news-time">5 Minutes Ago</span>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ const Footer = () => {
                 <div className="news-content">
                   <span className="news-arrow">&gt;</span>
                   <div>
-                    <p className="news-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                    <p className="news-text">New AI-powered tracking system launched for enhanced shipment visibility.</p>
                     <span className="news-time">5 Minutes Ago</span>
                   </div>
                 </div>
@@ -202,7 +202,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="bottom-bar">
           <div className="copyright">
-            Copyright © 2025 All Rights Reserved. Site By <span className="copyright-highlight">Sandeepa®</span>
+            Copyright © 2025 All Rights Reserved. Site By <a href="https://www.linkedin.com/in/sandeepanilushan/" target="_blank" rel="noopener noreferrer" className="copyright-highlight">Sandeepa Nilushan</a>
           </div>
           <div className="social-links">
             <a href="#" className="social-link"><FaFacebookF /></a>
@@ -243,8 +243,10 @@ const Footer = () => {
             value={scrollProgress}
             strokeWidth={10}
             styles={buildStyles({
-              pathColor: `black`,
-              trailColor: `#4B5563`,
+              // pathColor: `#00b0e8`, //Blue 
+              pathColor: `#f97316`, // orange
+              // pathColor: `#16a34a`,  // Green
+              trailColor: `black`,
               backgroundColor: 'transparent',
             })}
           >

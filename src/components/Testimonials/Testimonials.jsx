@@ -12,10 +12,22 @@ const Testimonials = () => {
 
     // Define the whyChooseUsItems data
     const whyChooseUsItems = [
-        { header: 'Dui ac hendrerit elementum quam ipsum auctor lorem', content: 'Content for item 1 goes here...' },
-        { header: 'Mauris vel magna a est lobortis volutpat', content: 'Content for item 2 goes here...' },
-        { header: 'Sed bibendum ornare lorem mauris feugiat suspendisse neque', content: 'Content for item 3 goes here...' },
-        { header: 'Nulla scelerisque dul hendrerit elementum quam', content: 'Content for item 4 goes here...' },
+        {
+            header: 'Global Network Coverage',
+            content: 'With operations spanning across 150+ countries and strategic partnerships worldwide, we ensure your cargo reaches any destination efficiently. Our extensive network includes major ports, airports, and land routes, providing comprehensive coverage for all your shipping needs.'
+        },
+        {
+            header: 'Advanced Tracking Technology',
+            content: 'Our state-of-the-art tracking system provides real-time visibility of your shipments. Access detailed status updates, estimated delivery times, and location tracking through our user-friendly platform, ensuring complete transparency throughout the shipping process.'
+        },
+        {
+            header: 'Customized Logistics Solutions',
+            content: 'We understand that every business has unique requirements. Our team of experts works closely with you to develop tailored logistics solutions that optimize your supply chain, reduce costs, and improve delivery efficiency according to your specific needs.'
+        },
+        {
+            header: '24/7 Customer Support',
+            content: 'Our dedicated support team is available round the clock to assist you with any queries or concerns. Whether it\'s shipment tracking, documentation, or emergency assistance, we ensure prompt and reliable support whenever you need it.'
+        },
     ];
 
     // Define the testimonials data
@@ -26,14 +38,14 @@ const Testimonials = () => {
             position: 'Managing Director',
         },
         {
-            text: 'This is another great testimonial from a happy client. It really highlights how our services have made a difference.',
-            name: 'JANE SMITH',
-            position: 'CEO',
+            text: 'TransMax has revolutionized our supply chain operations. Their innovative logistics solutions and dedicated team have significantly reduced our delivery times and operational costs. The real-time tracking system and proactive communication have made them an invaluable partner in our global expansion.',
+            name: 'SARAH CHEN',
+            position: 'Operations Director, TechGlobal Inc.',
         },
         {
-            text: 'A third testimonial to showcase more positive feedback and build trust with potential customers.',
-            name: 'PETER JONES',
-            position: 'Founder',
+            text: 'Working with TransMax has been a game-changer for our business. Their comprehensive logistics network and attention to detail ensure our products reach customers worldwide efficiently. The team\'s expertise in customs clearance and documentation has streamlined our international shipping process.',
+            name: 'MICHAEL RODRIGUEZ',
+            position: 'Supply Chain Manager, Global Retail Co.',
         },
     ];
 

@@ -191,6 +191,7 @@
   color: #555;
   margin-bottom: 30px;
   max-width: 420px;
+  text-align: justify;
 }
 
 @media (max-width: 1023px) {

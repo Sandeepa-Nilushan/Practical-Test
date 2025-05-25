@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowRight, FaPlane, FaRobot, FaTruckMoving, FaTruck } from 'react-icons/fa';
+import { FaArrowRight, FaPlane, FaRobot, FaTruckMoving, FaTruck, FaShip, FaWarehouse } from 'react-icons/fa';
 import image1 from '../../assets/images/alex-kotliarskyi-QBpZGqEMsKg-unsplash.webp';
 import image2 from '../../assets/images/mathurin-napoly-matnapo-uiOUuEx1e5U-unsplash.webp';
 import image3 from '../../assets/images/linkedin-sales-solutions-hrhjn6ZTgrM-unsplash.webp';
 import image4 from '../../assets/images/sten-rademaker-UZUzvJEvKnI-unsplash.webp';
+import image5 from '../../assets/images/krakenimages-376KN_ISplE-unsplash 1.webp';
+import image6 from '../../assets/images/paul-skorupskas-7KLa-xLbSXA-unsplash.webp';
 import './Services.css';
 
 const BlackCircleArrow = () => (
@@ -53,6 +55,18 @@ const Services = () => {
       icon: <FaTruck />,
       title: 'Transport Services',
       description: 'Efficient and reliable transport solutions for all your goods and cargo.',
+    },
+    {
+      image: image5,
+      icon: <FaShip />,
+      title: 'Sea Freight Services',
+      description: 'Global maritime shipping solutions with competitive rates and extensive port coverage.',
+    },
+    {
+      image: image6,
+      icon: <FaWarehouse />,
+      title: 'Warehousing Solutions',
+      description: 'Secure storage facilities with advanced inventory management and distribution capabilities.',
     },
   ];
 

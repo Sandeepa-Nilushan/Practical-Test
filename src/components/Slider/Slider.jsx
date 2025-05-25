@@ -67,9 +67,10 @@ const Slider = () => {
                 <span className="highlight">{currentSlide.highlight}</span>
               </h1>
               <p className="slider-description">
-                Amet, tempus egestas facilisis volutpat viverra molestie lobortis
-                posuere maecenas. molestie lobortis posuere maecenas. Eget sapien,
-                gravida nequi.
+                Experience seamless global logistics solutions with our comprehensive shipping services. 
+                We specialize in efficient cargo handling, real-time tracking, and reliable delivery 
+                across international borders. Trust us to handle your shipping needs with precision 
+                and care.
               </p>
               <button 
                 className="discover-button" 

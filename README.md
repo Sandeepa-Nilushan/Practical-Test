@@ -1,7 +1,6 @@
-# Xiteb Practical Task – FED Practical 3
+# Front end Desing Demo
 
 ## Developed by: Sandeepa Nilushan 
-### Senior Frontend Developer Practical Submission
 
 ---
 
@@ -34,9 +33,6 @@ src/
 └── App.js          # Main application component
 ```
 
-## Time Spent
-- Design: 2 hours
-- Development: 14 hours
 
 ## Features
 - Fully responsive design for all screen sizes
